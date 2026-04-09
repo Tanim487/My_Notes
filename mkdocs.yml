@@ -1,8 +1,6 @@
-site_name: 🐍 Python Notes
-site_description: A personal Python quick-reference cheatsheet
-site_author: Your Name
-
-docs_dir: docs/Python
+site_name: 📓 My Notes
+site_description: Personal programming notes and cheatsheets
+site_author: Tanim
 
 theme:
   name: material
@@ -30,8 +28,6 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
-  icon:
-    repo: fontawesome/brands/github
 
 markdown_extensions:
   - admonition
@@ -47,22 +43,30 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Basics:
-    - Data Types & Keywords: basics/data-types.md
-    - Operators: basics/operators.md
-    - Input & Type Casting: basics/input-casting.md
-    - Strings: basics/strings.md
-    - Conditional Statements: basics/conditionals.md
-    - Loops: basics/loops.md
-    - Functions & Recursion: basics/functions.md
-    - File I/O: basics/file-io.md
-  - Data Structures:
-    - Lists: data-structures/lists.md
-    - Tuples: data-structures/tuples.md
-    - Dictionaries: data-structures/dictionaries.md
-    - Sets: data-structures/sets.md
-  - OOP:
-    - Classes & Objects: oops/classes-objects.md
-    - Methods: oops/methods.md
-    - Encapsulation: oops/encapsulation.md
-    - Inheritance & Polymorphism: oops/inheritance-polymorphism.md
+  - Python:
+    - Overview: python/index.md
+    - Basics:
+      - Data Types & Keywords: python/basics/data-types.md
+      - Operators: python/basics/operators.md
+      - Input & Type Casting: python/basics/input-casting.md
+      - Strings: python/basics/strings.md
+      - Conditional Statements: python/basics/conditionals.md
+      - Loops: python/basics/loops.md
+      - Functions & Recursion: python/basics/functions.md
+      - File I/O: python/basics/file-io.md
+    - Data Structures:
+      - Lists: python/data-structures/lists.md
+      - Tuples: python/data-structures/tuples.md
+      - Dictionaries: python/data-structures/dictionaries.md
+      - Sets: python/data-structures/sets.md
+    - OOP:
+      - Classes & Objects: python/oops/classes-objects.md
+      - Methods: python/oops/methods.md
+      - Encapsulation: python/oops/encapsulation.md
+      - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
+  - JavaScript:
+    - Overview: javascript/index.md
+  - C:
+    - Overview: c/index.md
+  - C++:
+    - Overview: cpp/index.md
