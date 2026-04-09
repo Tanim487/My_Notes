@@ -13,26 +13,28 @@
       
       
       
+        <link rel="prev" href="../operators/">
       
-        <link rel="next" href="python/">
+      
+        <link rel="next" href="../strings/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>📓 My Notes</title>
+        <title>Input & Type Casting - 📓 My Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#my-notes" class="md-skip">
+        <a href="#input-type-casting" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="📓 My Notes" class="md-header__button md-logo" aria-label="📓 My Notes" data-md-component="logo">
+    <a href="../../.." title="📓 My Notes" class="md-header__button md-logo" aria-label="📓 My Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Input & Type Casting
             
           </span>
         </div>
@@ -209,11 +211,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -230,11 +230,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="python/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -254,7 +256,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="javascript/index.md" class="md-tabs__link">
+        <a href="../../../javascript/index.md" class="md-tabs__link">
           
   
   
@@ -274,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="c/index.md" class="md-tabs__link">
+        <a href="../../../c/index.md" class="md-tabs__link">
           
   
   
@@ -294,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="cpp/index.md" class="md-tabs__link">
+        <a href="../../../cpp/index.md" class="md-tabs__link">
           
   
   
@@ -328,7 +330,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="📓 My Notes" class="md-nav__button md-logo" aria-label="📓 My Notes" data-md-component="logo">
+    <a href="../../.." title="📓 My Notes" class="md-nav__button md-logo" aria-label="📓 My Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -343,37 +345,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -389,37 +364,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#languages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 Languages
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -428,28 +372,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -467,7 +414,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -485,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -510,28 +457,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -549,7 +499,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -567,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/data-types/" class="md-nav__link">
+      <a href="../data-types/" class="md-nav__link">
         
   
   
@@ -595,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/operators/" class="md-nav__link">
+      <a href="../operators/" class="md-nav__link">
         
   
   
@@ -620,10 +570,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="python/basics/input-casting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Type Casting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -639,6 +616,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-numeric-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking Numeric Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-conversion-vs-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type Conversion vs Casting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casting Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -651,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/strings/" class="md-nav__link">
+      <a href="../strings/" class="md-nav__link">
         
   
   
@@ -679,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/conditionals/" class="md-nav__link">
+      <a href="../conditionals/" class="md-nav__link">
         
   
   
@@ -707,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/loops/" class="md-nav__link">
+      <a href="../loops/" class="md-nav__link">
         
   
   
@@ -735,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/functions/" class="md-nav__link">
+      <a href="../functions/" class="md-nav__link">
         
   
   
@@ -763,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/basics/file-io/" class="md-nav__link">
+      <a href="../file-io/" class="md-nav__link">
         
   
   
@@ -805,10 +846,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -817,7 +861,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
             
   
   
@@ -853,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data-structures/lists/" class="md-nav__link">
+      <a href="../../data-structures/lists/" class="md-nav__link">
         
   
   
@@ -881,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data-structures/tuples/" class="md-nav__link">
+      <a href="../../data-structures/tuples/" class="md-nav__link">
         
   
   
@@ -909,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data-structures/dictionaries/" class="md-nav__link">
+      <a href="../../data-structures/dictionaries/" class="md-nav__link">
         
   
   
@@ -937,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data-structures/sets/" class="md-nav__link">
+      <a href="../../data-structures/sets/" class="md-nav__link">
         
   
   
@@ -979,10 +1023,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -991,7 +1038,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
             
   
   
@@ -1027,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/oops/classes-objects/" class="md-nav__link">
+      <a href="../../oops/classes-objects/" class="md-nav__link">
         
   
   
@@ -1055,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/oops/methods/" class="md-nav__link">
+      <a href="../../oops/methods/" class="md-nav__link">
         
   
   
@@ -1083,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/oops/encapsulation/" class="md-nav__link">
+      <a href="../../oops/encapsulation/" class="md-nav__link">
         
   
   
@@ -1111,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/oops/inheritance-polymorphism/" class="md-nav__link">
+      <a href="../../oops/inheritance-polymorphism/" class="md-nav__link">
         
   
   
@@ -1208,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/index.md" class="md-nav__link">
+      <a href="../../../javascript/index.md" class="md-nav__link">
         
   
   
@@ -1297,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="c/index.md" class="md-nav__link">
+      <a href="../../../c/index.md" class="md-nav__link">
         
   
   
@@ -1386,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cpp/index.md" class="md-nav__link">
+      <a href="../../../cpp/index.md" class="md-nav__link">
         
   
   
@@ -1441,10 +1488,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#languages" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Languages
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-numeric-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking Numeric Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-conversion-vs-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type Conversion vs Casting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casting Examples
       
     </span>
   </a>
@@ -1468,46 +1548,48 @@
 
 
 
-<h1 id="my-notes">📓 My Notes</h1>
-<p>Welcome! This is my personal programming notes site — quick-reference cheatsheets for everything I learn.</p>
+<h1 id="input-type-casting">Input &amp; Type Casting</h1>
+<h2 id="input">Input</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter here: &quot;</span><span class="p">)</span>   <span class="c1"># the string is a prompt/placeholder</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Always a String</p>
+<p>The result of <code>input()</code> is <strong>always a string</strong>, even if the user types a number.</p>
+</div>
 <hr />
-<h2 id="languages">📚 Languages</h2>
+<h2 id="taking-numeric-input">Taking Numeric Input</h2>
+<p>Cast the result to get a number:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a decimal: &quot;</span><span class="p">))</span>
+</code></pre></div>
+<hr />
+<h2 id="type-conversion-vs-casting">Type Conversion vs Casting</h2>
 <table>
 <thead>
 <tr>
-<th>Language</th>
-<th>Status</th>
-<th>Topics Covered</th>
+<th>Term</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="python/">🐍 Python</a></td>
-<td>✅ Available</td>
-<td>Basics, Data Structures, OOP</td>
+<td><strong>Conversion</strong></td>
+<td>Happens <strong>automatically</strong> in Python (implicit)</td>
 </tr>
 <tr>
-<td><a href="javascript/index.md">🌐 JavaScript</a></td>
-<td>🔜 Coming Soon</td>
-<td>—</td>
-</tr>
-<tr>
-<td><a href="c/index.md">⚙️ C</a></td>
-<td>🔜 Coming Soon</td>
-<td>—</td>
-</tr>
-<tr>
-<td><a href="cpp/index.md">➕ C++</a></td>
-<td>🔜 Coming Soon</td>
-<td>—</td>
+<td><strong>Casting</strong></td>
+<td>You <strong>manually</strong> change the type (explicit)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<blockquote>
-<p>💡 Use the <strong>navigation tabs</strong> at the top to jump to any language.
-Use the <strong>search bar</strong> to find any topic instantly.</p>
-</blockquote>
+<h2 id="casting-examples">Casting Examples</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>           <span class="c1"># cast to integer</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>         <span class="c1"># cast to float</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Cast dictionary keys to a list</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+</code></pre></div>
 
 
 
@@ -1563,10 +1645,10 @@ Use the <strong>search bar</strong> to find any topic instantly.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
