@@ -2,6 +2,8 @@ site_name: 🐍 Python Notes
 site_description: A personal Python quick-reference cheatsheet
 site_author: Your Name
 
+docs_dir: docs/Python
+
 theme:
   name: material
   palette:
