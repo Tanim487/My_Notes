@@ -1,4 +1,66 @@
-site_name: My Notes
+site_name: 🐍 Python Notes
+site_description: A personal Python quick-reference cheatsheet
+site_author: Your Name
 
 theme:
   name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Basics:
+    - Data Types & Keywords: basics/data-types.md
+    - Operators: basics/operators.md
+    - Input & Type Casting: basics/input-casting.md
+    - Strings: basics/strings.md
+    - Conditional Statements: basics/conditionals.md
+    - Loops: basics/loops.md
+    - Functions & Recursion: basics/functions.md
+    - File I/O: basics/file-io.md
+  - Data Structures:
+    - Lists: data-structures/lists.md
+    - Tuples: data-structures/tuples.md
+    - Dictionaries: data-structures/dictionaries.md
+    - Sets: data-structures/sets.md
+  - OOP:
+    - Classes & Objects: oop/classes-objects.md
+    - Methods: oop/methods.md
+    - Encapsulation: oop/encapsulation.md
+    - Inheritance & Polymorphism: oop/inheritance-polymorphism.md
