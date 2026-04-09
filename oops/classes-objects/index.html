@@ -14,25 +14,23 @@
       
       
       
-        <link rel="next" href="basics/data-types/">
-      
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>🐍 Python Notes</title>
+        <title>Classes & Objects - 🐍 Python Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-notes" class="md-skip">
+        <a href="#classes-objects" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="🐍 Python Notes" class="md-header__button md-logo" aria-label="🐍 Python Notes" data-md-component="logo">
+    <a href="../.." title="🐍 Python Notes" class="md-header__button md-logo" aria-label="🐍 Python Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Classes &amp; Objects
             
           </span>
         </div>
@@ -209,11 +207,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -234,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="basics/data-types/" class="md-tabs__link">
+        <a href="../../basics/data-types/" class="md-tabs__link">
           
   
   
@@ -254,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="data-structures/lists/" class="md-tabs__link">
+        <a href="../../data-structures/lists/" class="md-tabs__link">
           
   
   
@@ -274,7 +270,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="oop/classes-objects.md" class="md-tabs__link">
+        <a href="../../oop/classes-objects.md" class="md-tabs__link">
           
   
   
@@ -308,7 +304,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="🐍 Python Notes" class="md-nav__button md-logo" aria-label="🐍 Python Notes" data-md-component="logo">
+    <a href="../.." title="🐍 Python Notes" class="md-nav__button md-logo" aria-label="🐍 Python Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -323,37 +319,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -369,48 +338,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#whats-covered" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📚 What's Covered
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🗂️ Quick Reference
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -476,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/data-types/" class="md-nav__link">
+      <a href="../../basics/data-types/" class="md-nav__link">
         
   
   
@@ -504,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/operators/" class="md-nav__link">
+      <a href="../../basics/operators/" class="md-nav__link">
         
   
   
@@ -532,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/input-casting/" class="md-nav__link">
+      <a href="../../basics/input-casting/" class="md-nav__link">
         
   
   
@@ -560,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/strings/" class="md-nav__link">
+      <a href="../../basics/strings/" class="md-nav__link">
         
   
   
@@ -588,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/conditionals/" class="md-nav__link">
+      <a href="../../basics/conditionals/" class="md-nav__link">
         
   
   
@@ -616,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/loops/" class="md-nav__link">
+      <a href="../../basics/loops/" class="md-nav__link">
         
   
   
@@ -644,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/functions/" class="md-nav__link">
+      <a href="../../basics/functions/" class="md-nav__link">
         
   
   
@@ -672,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="basics/file-io/" class="md-nav__link">
+      <a href="../../basics/file-io/" class="md-nav__link">
         
   
   
@@ -761,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-structures/lists/" class="md-nav__link">
+      <a href="../../data-structures/lists/" class="md-nav__link">
         
   
   
@@ -789,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-structures/tuples/" class="md-nav__link">
+      <a href="../../data-structures/tuples/" class="md-nav__link">
         
   
   
@@ -817,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-structures/dictionaries/" class="md-nav__link">
+      <a href="../../data-structures/dictionaries/" class="md-nav__link">
         
   
   
@@ -845,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-structures/sets/" class="md-nav__link">
+      <a href="../../data-structures/sets/" class="md-nav__link">
         
   
   
@@ -934,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oop/classes-objects.md" class="md-nav__link">
+      <a href="../../oop/classes-objects.md" class="md-nav__link">
         
   
   
@@ -962,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oop/methods.md" class="md-nav__link">
+      <a href="../../oop/methods.md" class="md-nav__link">
         
   
   
@@ -990,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oop/encapsulation.md" class="md-nav__link">
+      <a href="../../oop/encapsulation.md" class="md-nav__link">
         
   
   
@@ -1018,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oop/inheritance-polymorphism.md" class="md-nav__link">
+      <a href="../../oop/inheritance-polymorphism.md" class="md-nav__link">
         
   
   
@@ -1073,10 +1000,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whats-covered" class="md-nav__link">
+  <a href="#basic-class-object" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 What's Covered
+        Basic Class &amp; Object
       
     </span>
   </a>
@@ -1084,10 +1011,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-reference" class="md-nav__link">
+  <a href="#__init__-constructor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🗂️ Quick Reference
+        __init__ Constructor
       
     </span>
   </a>
@@ -1111,71 +1038,55 @@
 
 
 
-<h1 id="python-notes">🐍 Python Notes</h1>
-<p>Welcome to my personal Python quick-reference notes — taken while learning from YouTube tutorials.</p>
-<p>Use the <strong>navigation tabs</strong> at the top to explore topics, or use the <strong>search bar</strong> to find anything instantly.</p>
-<hr />
-<h2 id="whats-covered">📚 What's Covered</h2>
+<h1 id="classes-objects">Classes &amp; Objects</h1>
+<p>OOP maps <strong>real-world scenarios</strong> into code using objects.</p>
 <table>
 <thead>
 <tr>
-<th>Section</th>
-<th>Topics</th>
+<th>Term</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Basics</strong></td>
-<td>Data Types, Operators, Input, Strings, Conditionals, Loops, Functions, File I/O</td>
+<td><strong>Class</strong></td>
+<td>Blueprint for creating objects</td>
 </tr>
 <tr>
-<td><strong>Data Structures</strong></td>
-<td>Lists, Tuples, Dictionaries, Sets</td>
-</tr>
-<tr>
-<td><strong>OOP</strong></td>
-<td>Classes, Objects, Methods, Encapsulation, Inheritance, Polymorphism</td>
+<td><strong>Object</strong></td>
+<td>An instance of a class</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="quick-reference">🗂️ Quick Reference</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Basics</label><label for="__tabbed_1_2">Data Structures</label><label for="__tabbed_1_3">OOP</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li><a href="basics/data-types/">Data Types &amp; Keywords</a></li>
-<li><a href="basics/operators/">Operators</a></li>
-<li><a href="basics/input-casting/">Input &amp; Type Casting</a></li>
-<li><a href="basics/strings/">Strings</a></li>
-<li><a href="basics/conditionals/">Conditional Statements</a></li>
-<li><a href="basics/loops/">Loops</a></li>
-<li><a href="basics/functions/">Functions &amp; Recursion</a></li>
-<li><a href="basics/file-io/">File I/O</a></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li><a href="data-structures/lists/">Lists</a></li>
-<li><a href="data-structures/tuples/">Tuples</a></li>
-<li><a href="data-structures/dictionaries/">Dictionaries</a></li>
-<li><a href="data-structures/sets/">Sets</a></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li><a href="oop/classes-objects.md">Classes &amp; Objects</a></li>
-<li><a href="oop/methods.md">Methods</a></li>
-<li><a href="oop/encapsulation.md">Encapsulation</a></li>
-<li><a href="oop/inheritance-polymorphism.md">Inheritance &amp; Polymorphism</a></li>
-</ul>
-</div>
-</div>
-</div>
+<h2 id="basic-class-object">Basic Class &amp; Object</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Student</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;karan kumar&quot;</span>    <span class="c1"># class attribute</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>              <span class="c1"># create object (instance)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
 <hr />
-<blockquote>
-<p>💡 These notes are meant as a <strong>personal cheat sheet</strong> — not a full tutorial. Each page is a focused, scannable reference.</p>
-</blockquote>
+<h2 id="__init__-constructor"><code>__init__</code> Constructor</h2>
+<p>The <code>__init__()</code> method runs <strong>automatically</strong> whenever a class is instantiated.
+Used to set object attributes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Student</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">college</span> <span class="o">=</span> <span class="s2">&quot;ABC College&quot;</span>     <span class="c1"># class attribute — shared by ALL objects</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">fullname</span>    <span class="c1"># object attribute — unique per object</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;karan&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title"><code>self</code></p>
+<p><code>self</code> is a reference to the <strong>current instance</strong> of the class. It's how you access variables that belong to the object.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Object attr &gt; Class attr</p>
+<p>If an object attribute has the same name as a class attribute, the <strong>object attribute takes priority</strong>.</p>
+</div>
 
 
 
@@ -1231,10 +1142,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
