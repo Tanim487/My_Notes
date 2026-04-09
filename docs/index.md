@@ -35,10 +35,10 @@ Use the **navigation tabs** at the top to explore topics, or use the **search ba
     - [Sets](data-structures/sets.md)
 
 === "OOP"
-    - [Classes & Objects](oop/classes-objects.md)
-    - [Methods](oop/methods.md)
-    - [Encapsulation](oop/encapsulation.md)
-    - [Inheritance & Polymorphism](oop/inheritance-polymorphism.md)
+    - [Classes & Objects](oops/classes-objects.md)
+    - [Methods](oops/methods.md)
+    - [Encapsulation](oops/encapsulation.md)
+    - [Inheritance & Polymorphism](oops/inheritance-polymorphism.md)
 
 ---
 
