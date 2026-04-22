@@ -72,13 +72,13 @@ nav:
     - Libraries:
       - Overview: python/libraries/index.md
       - NumPy: python/libraries/numpy.md
-  - Concepts:
-    - Overview: concepts/index.md
+  - Conceptuals:
+    - Overview: conceptuals/index.md
     - Machine Learning:
-      - Overview: concepts/ml/index.md
+      - Overview: conceptuals/ml/index.md
     - Deep Learning:
-      - Overview: concepts/dl/index.md
-      - Optimizers: concepts/dl/optimizers.md
+      - Overview: conceptuals/dl/index.md
+      - Optimizers: conceptuals/dl/optimizers.md
   - JavaScript:
     - Overview: javascript/index.md
   - C:
