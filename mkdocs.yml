@@ -40,6 +40,11 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md
@@ -64,6 +69,16 @@ nav:
       - Methods: python/oops/methods.md
       - Encapsulation: python/oops/encapsulation.md
       - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
+    - Libraries:
+      - Overview: python/libraries/index.md
+      - NumPy: python/libraries/numpy.md
+  - Concepts:
+    - Overview: concepts/index.md
+    - Machine Learning:
+      - Overview: concepts/ml/index.md
+    - Deep Learning:
+      - Overview: concepts/dl/index.md
+      - Optimizers: concepts/dl/optimizers.md
   - JavaScript:
     - Overview: javascript/index.md
   - C:
