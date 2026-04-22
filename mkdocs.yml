@@ -44,6 +44,7 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
+  - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
@@ -69,9 +70,9 @@ nav:
       - Methods: python/oops/methods.md
       - Encapsulation: python/oops/encapsulation.md
       - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
-  - Python Libraries:
-    - Overview: python_libraries/index.md
-    - NumPy: python_libraries/numpy.md
+  - Python libraries:
+      - Overview: python_libraries/index.md
+      - NumPy: python_libraries/numpy.md
   - Conceptuals:
     - Overview: conceptuals/index.md
     - Machine Learning:
