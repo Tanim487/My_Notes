@@ -2284,9 +2284,7 @@
 <h2 id="exponential-weighted-moving-average-ewma">Exponential Weighted Moving Average (EWMA)</h2>
 <p>A technique to find the <strong>trend in time-series data</strong>. Used in time series, finance, and signal processing — and now in deep learning to build better optimizers.</p>
 <div class="arithmatex">\[V_t = \beta \cdot V_{t-1} + (1 - \beta) \cdot \theta_t\]</div>
-<blockquote>
 <p>Most optimum value: <strong>β = 0.9</strong></p>
-</blockquote>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># In code (using pandas)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">x1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;meantemp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ewm</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>   <span class="c1"># 0 &lt; alpha &lt; 1</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ewma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span>
@@ -2334,12 +2332,10 @@
 <h2 id="momentum">Momentum</h2>
 <p>Momentum uses EWMA on gradients to build up speed in consistent directions and dampen oscillations.</p>
 <p>Performs better in 3 scenarios: <strong>high curvature</strong>, <strong>consistent gradients</strong>, <strong>noisy gradients (local minima)</strong></p>
-<div class="arithmatex">\[V_t = \beta \cdot V_{t-1} + \eta \cdot \nabla W_t$$
-$$W_{t+1} = W_t - V_t\]</div>
-<blockquote>
-<p>When β = 0, this reduces to standard SGD:
-$<span class="arithmatex">\(W_{t+1} = W_t - \eta \cdot \nabla W_t\)</span>$</p>
-</blockquote>
+<div class="arithmatex">\[V_t = \beta \cdot V_{t-1} + \eta \cdot \nabla W_t\]</div>
+<div class="arithmatex">\[W_{t+1} = W_t - V_t\]</div>
+<p>When β = 0, this reduces to standard SGD:</p>
+<div class="arithmatex">\[W_{t+1} = W_t - \eta \cdot \nabla W_t\]</div>
 <div class="admonition success">
 <p class="admonition-title">Pros</p>
 <p>Faster convergence than vanilla batch gradient descent.</p>
@@ -2351,9 +2347,12 @@ $<span class="arithmatex">\(W_{t+1} = W_t - \eta \cdot \nabla W_t\)</span>$</p>
 <hr />
 <h2 id="nag-nesterov-accelerated-gradient">NAG (Nesterov Accelerated Gradient)</h2>
 <p>NAG is a smarter version of Momentum — it <strong>looks ahead</strong> before computing the gradient, so it slows down earlier near the minima.</p>
-<div class="arithmatex">\[W_{la} = W_t - \beta \cdot V_{t-1} \quad \text{(look-ahead position)}$$
-$$V_t = \beta \cdot V_{t-1} + \eta \cdot \nabla W_{la}$$
-$$W_{t+1} = W_t - V_t\]</div>
+<p><strong>Step 1</strong> — Compute look-ahead position:</p>
+<div class="arithmatex">\[W_{la} = W_t - \beta \cdot V_{t-1}\]</div>
+<p><strong>Step 2</strong> — Compute velocity using look-ahead gradient:</p>
+<div class="arithmatex">\[V_t = \beta \cdot V_{t-1} + \eta \cdot \nabla W_{la}\]</div>
+<p><strong>Step 3</strong> — Update weights:</p>
+<div class="arithmatex">\[W_{t+1} = W_t - V_t\]</div>
 <div class="admonition failure">
 <p class="admonition-title">Disadvantage</p>
 <p>Oscillation dampening — can still oscillate near minima.</p>
@@ -2377,47 +2376,41 @@ $$W_{t+1} = W_t - V_t\]</div>
 <hr />
 <h2 id="adagrad-adaptive-gradient">Adagrad (Adaptive Gradient)</h2>
 <p>Adagrad adapts the learning rate <strong>per parameter</strong> — parameters with large gradients get smaller learning rates and vice versa.</p>
-<div class="arithmatex">\[V_t = V_{t-1} + (\nabla W_t)^2$$
-$$W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t\]</div>
+<div class="arithmatex">\[V_t = V_{t-1} + (\nabla W_t)^2\]</div>
+<div class="arithmatex">\[W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t\]</div>
 <div class="admonition failure">
 <p class="admonition-title">Critical Disadvantage</p>
 <p><span class="arithmatex">\(V_t\)</span> keeps growing → the learning rate shrinks to near zero → <strong>training stalls before reaching the minima</strong>.
 This is why Adagrad is <strong>not used in neural networks</strong>.</p>
 </div>
-<blockquote>
-<p>✅ Suitable for: <strong>Linear Regression</strong> (sparse data)
-❌ Not suitable for: <strong>Neural Networks</strong></p>
-</blockquote>
+<p>✅ Suitable for: <strong>Linear Regression</strong> (sparse data)</p>
+<p>❌ Not suitable for: <strong>Neural Networks</strong></p>
 <hr />
 <h2 id="rmsprop-root-mean-square-propagation">RMSProp (Root Mean Square Propagation)</h2>
 <p>RMSProp fixes Adagrad's stalling problem by using EWMA on the squared gradients instead of accumulating them infinitely.</p>
-<div class="arithmatex">\[V_t = \beta \cdot V_{t-1} + (1 - \beta)(\nabla W_t)^2 \quad (\beta = 0.95)$$
-$$W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t\]</div>
+<div class="arithmatex">\[V_t = \beta \cdot V_{t-1} + (1 - \beta)(\nabla W_t)^2 \qquad \beta = 0.95\]</div>
+<div class="arithmatex">\[W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t\]</div>
 <div class="admonition success">
 <p class="admonition-title">No significant disadvantages</p>
 <p>RMSProp is one of the most powerful optimizers and works well for both linear and non-linear models.</p>
 </div>
-<blockquote>
 <p>✅ Suitable for: <strong>Linear Regression AND Neural Networks</strong></p>
-</blockquote>
 <hr />
 <h2 id="adam-adaptive-moment-estimation">Adam (Adaptive Moment Estimation)</h2>
 <p>Adam combines <strong>Momentum</strong> (1st moment) and <strong>RMSProp</strong> (2nd moment) — the best of both worlds.
 Most powerful optimizer for ANN, CNN, and RNN.</p>
+<p><strong>Main update rule:</strong></p>
 <div class="arithmatex">\[W_{t+1} = W_t - \frac{\eta}{\sqrt{\hat{V}_t + \epsilon}} \cdot \hat{m}_t\]</div>
-<p>Where:</p>
-<div class="arithmatex">\[m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla W_t \quad \text{(Momentum term)}$$
-$$V_t = \beta_2 \cdot V_{t-1} + (1 - \beta_2) \cdot (\nabla W_t)^2 \quad \text{(RMSProp term)}\]</div>
-<blockquote>
+<p><strong>Momentum term</strong> (1st moment):</p>
+<div class="arithmatex">\[m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla W_t\]</div>
+<p><strong>RMSProp term</strong> (2nd moment):</p>
+<div class="arithmatex">\[V_t = \beta_2 \cdot V_{t-1} + (1 - \beta_2) \cdot (\nabla W_t)^2\]</div>
 <p>Default values (Keras): <strong>β₁ = 0.9</strong>, <strong>β₂ = 0.99</strong>, <strong>η = 0.01 or 0.1</strong></p>
-</blockquote>
 <h3 id="bias-correction">Bias Correction</h3>
 <p>Early in training, <span class="arithmatex">\(m_t\)</span> and <span class="arithmatex">\(V_t\)</span> are biased towards zero. Bias correction fixes this:</p>
-<div class="arithmatex">\[\hat{m}_t = \frac{m_t}{1 - \beta_1^t}$$
-$$\hat{V}_t = \frac{V_t}{1 - \beta_2^t}\]</div>
-<blockquote>
+<div class="arithmatex">\[\hat{m}_t = \frac{m_t}{1 - \beta_1^t}\]</div>
+<div class="arithmatex">\[\hat{V}_t = \frac{V_t}{1 - \beta_2^t}\]</div>
 <p>Here <strong>t</strong> is the current epoch number.</p>
-</blockquote>
 <h3 id="adam-in-keras">Adam in Keras</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span>
