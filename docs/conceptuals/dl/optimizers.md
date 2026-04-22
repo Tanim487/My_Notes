@@ -40,7 +40,7 @@ A technique to find the **trend in time-series data**. Used in time series, fina
 
 $$V_t = \beta \cdot V_{t-1} + (1 - \beta) \cdot \theta_t$$
 
-> Most optimum value: **β = 0.9**
+Most optimum value: **β = 0.9**
 
 ```python
 # In code (using pandas)
@@ -70,10 +70,12 @@ Momentum uses EWMA on gradients to build up speed in consistent directions and d
 Performs better in 3 scenarios: **high curvature**, **consistent gradients**, **noisy gradients (local minima)**
 
 $$V_t = \beta \cdot V_{t-1} + \eta \cdot \nabla W_t$$
+
 $$W_{t+1} = W_t - V_t$$
 
-> When β = 0, this reduces to standard SGD:
-> $$W_{t+1} = W_t - \eta \cdot \nabla W_t$$
+When β = 0, this reduces to standard SGD:
+
+$$W_{t+1} = W_t - \eta \cdot \nabla W_t$$
 
 !!! success "Pros"
     Faster convergence than vanilla batch gradient descent.
@@ -87,8 +89,16 @@ $$W_{t+1} = W_t - V_t$$
 
 NAG is a smarter version of Momentum — it **looks ahead** before computing the gradient, so it slows down earlier near the minima.
 
-$$W_{la} = W_t - \beta \cdot V_{t-1} \quad \text{(look-ahead position)}$$
+**Step 1** — Compute look-ahead position:
+
+$$W_{la} = W_t - \beta \cdot V_{t-1}$$
+
+**Step 2** — Compute velocity using look-ahead gradient:
+
 $$V_t = \beta \cdot V_{t-1} + \eta \cdot \nabla W_{la}$$
+
+**Step 3** — Update weights:
+
 $$W_{t+1} = W_t - V_t$$
 
 !!! failure "Disadvantage"
@@ -120,14 +130,16 @@ tf.keras.optimizers.SGD(
 Adagrad adapts the learning rate **per parameter** — parameters with large gradients get smaller learning rates and vice versa.
 
 $$V_t = V_{t-1} + (\nabla W_t)^2$$
+
 $$W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t$$
 
 !!! failure "Critical Disadvantage"
     $V_t$ keeps growing → the learning rate shrinks to near zero → **training stalls before reaching the minima**.
     This is why Adagrad is **not used in neural networks**.
 
-> ✅ Suitable for: **Linear Regression** (sparse data)
-> ❌ Not suitable for: **Neural Networks**
+✅ Suitable for: **Linear Regression** (sparse data)
+
+❌ Not suitable for: **Neural Networks**
 
 ---
 
@@ -135,13 +147,14 @@ $$W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t$$
 
 RMSProp fixes Adagrad's stalling problem by using EWMA on the squared gradients instead of accumulating them infinitely.
 
-$$V_t = \beta \cdot V_{t-1} + (1 - \beta)(\nabla W_t)^2 \quad (\beta = 0.95)$$
+$$V_t = \beta \cdot V_{t-1} + (1 - \beta)(\nabla W_t)^2 \qquad \beta = 0.95$$
+
 $$W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t$$
 
 !!! success "No significant disadvantages"
     RMSProp is one of the most powerful optimizers and works well for both linear and non-linear models.
 
-> ✅ Suitable for: **Linear Regression AND Neural Networks**
+✅ Suitable for: **Linear Regression AND Neural Networks**
 
 ---
 
@@ -150,23 +163,29 @@ $$W_{t+1} = W_t - \frac{\eta}{\sqrt{V_t + \epsilon}} \cdot \nabla W_t$$
 Adam combines **Momentum** (1st moment) and **RMSProp** (2nd moment) — the best of both worlds.
 Most powerful optimizer for ANN, CNN, and RNN.
 
+**Main update rule:**
+
 $$W_{t+1} = W_t - \frac{\eta}{\sqrt{\hat{V}_t + \epsilon}} \cdot \hat{m}_t$$
 
-Where:
+**Momentum term** (1st moment):
 
-$$m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla W_t \quad \text{(Momentum term)}$$
-$$V_t = \beta_2 \cdot V_{t-1} + (1 - \beta_2) \cdot (\nabla W_t)^2 \quad \text{(RMSProp term)}$$
+$$m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla W_t$$
 
-> Default values (Keras): **β₁ = 0.9**, **β₂ = 0.99**, **η = 0.01 or 0.1**
+**RMSProp term** (2nd moment):
+
+$$V_t = \beta_2 \cdot V_{t-1} + (1 - \beta_2) \cdot (\nabla W_t)^2$$
+
+Default values (Keras): **β₁ = 0.9**, **β₂ = 0.99**, **η = 0.01 or 0.1**
 
 ### Bias Correction
 
 Early in training, $m_t$ and $V_t$ are biased towards zero. Bias correction fixes this:
 
 $$\hat{m}_t = \frac{m_t}{1 - \beta_1^t}$$
+
 $$\hat{V}_t = \frac{V_t}{1 - \beta_2^t}$$
 
-> Here **t** is the current epoch number.
+Here **t** is the current epoch number.
 
 ### Adam in Keras
 
