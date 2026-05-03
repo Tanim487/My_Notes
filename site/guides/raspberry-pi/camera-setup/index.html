@@ -2371,18 +2371,22 @@
 </div>
 <hr />
 <h2 id="phase-2-install-build-dependencies">Phase 2: Install Build Dependencies</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Update system</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Install build tools and required libraries</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>ninja-build<span class="w"> </span>pkg-config<span class="w"> </span>libepoxy-dev<span class="w"> </span>libjpeg-dev<span class="w"> </span>libtiff5-dev<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>libpng-dev<span class="w"> </span>libboost-dev<span class="w"> </span>libboost-program-options-dev<span class="w"> </span>libdrm-dev<span class="w"> </span>libexif-dev<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>python3-pip<span class="w"> </span>python3-jinja2<span class="w"> </span>python3-yaml<span class="w"> </span>python3-ply<span class="w"> </span>libgnutls28-dev<span class="w"> </span>openssl<span class="w"> </span>libssl-dev
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># Upgrade Meson — Ubuntu 22.04 default is too old</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>-y<span class="w"> </span>meson
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>meson
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">hash</span><span class="w"> </span>-r
+<p><strong>Update the system:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</code></pre></div>
+<p><strong>Install build tools and required libraries:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>ninja-build<span class="w"> </span>pkg-config<span class="w"> </span>libepoxy-dev<span class="w"> </span>libjpeg-dev<span class="w"> </span>libtiff5-dev<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>libpng-dev<span class="w"> </span>libboost-dev<span class="w"> </span>libboost-program-options-dev<span class="w"> </span>libdrm-dev<span class="w"> </span>libexif-dev<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>python3-pip<span class="w"> </span>python3-jinja2<span class="w"> </span>python3-yaml<span class="w"> </span>python3-ply<span class="w"> </span>libgnutls28-dev<span class="w"> </span>openssl<span class="w"> </span>libssl-dev
+</code></pre></div>
+<p><strong>Remove the old Meson:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>-y<span class="w"> </span>meson
+</code></pre></div>
+<p><strong>Install the latest Meson via pip:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>meson
+</code></pre></div>
+<p><strong>Clear the shell command cache so it picks up the new Meson:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">hash</span><span class="w"> </span>-r
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Why upgrade Meson?</p>
@@ -2391,54 +2395,64 @@
 <hr />
 <h2 id="phase-3-build-libcamera-from-source">Phase 3: Build libcamera from Source</h2>
 <p>Ubuntu's default <code>libcamera</code> package is incompatible with the Pi's camera stack. Building from source gives you proper hardware optimization.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>~
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://git.libcamera.org/libcamera/libcamera.git
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">cd</span><span class="w"> </span>libcamera
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Configure for Raspberry Pi 4 (vc4 pipeline)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>meson<span class="w"> </span>setup<span class="w"> </span>build<span class="w"> </span>-Dpipelines<span class="o">=</span>rpi/vc4<span class="w"> </span>-Dipas<span class="o">=</span>rpi/vc4<span class="w"> </span>-Dv4l2<span class="o">=</span>enabled<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>-Dgstreamer<span class="o">=</span>disabled<span class="w"> </span>-Dtest<span class="o">=</span><span class="nb">false</span><span class="w"> </span>-Dlc-compliance<span class="o">=</span>disabled<span class="w"> </span>-Dcam<span class="o">=</span>disabled<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>-Dqcam<span class="o">=</span>disabled<span class="w"> </span>-Ddocumentation<span class="o">=</span>disabled<span class="w"> </span>-Dprefix<span class="o">=</span>/usr
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Compile and install</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>ninja<span class="w"> </span>-C<span class="w"> </span>build
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>sudo<span class="w"> </span>ninja<span class="w"> </span>-C<span class="w"> </span>build<span class="w"> </span>install
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>sudo<span class="w"> </span>ldconfig
+<p><strong>Clone the repository:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>~
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://git.libcamera.org/libcamera/libcamera.git
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">cd</span><span class="w"> </span>libcamera
+</code></pre></div>
+<p><strong>Configure for Raspberry Pi 4 (vc4 pipeline):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>meson<span class="w"> </span>setup<span class="w"> </span>build<span class="w"> </span>-Dpipelines<span class="o">=</span>rpi/vc4<span class="w"> </span>-Dipas<span class="o">=</span>rpi/vc4<span class="w"> </span>-Dv4l2<span class="o">=</span>enabled<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>-Dgstreamer<span class="o">=</span>disabled<span class="w"> </span>-Dtest<span class="o">=</span><span class="nb">false</span><span class="w"> </span>-Dlc-compliance<span class="o">=</span>disabled<span class="w"> </span>-Dcam<span class="o">=</span>disabled<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>-Dqcam<span class="o">=</span>disabled<span class="w"> </span>-Ddocumentation<span class="o">=</span>disabled<span class="w"> </span>-Dprefix<span class="o">=</span>/usr
+</code></pre></div>
+<p><strong>Compile:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ninja<span class="w"> </span>-C<span class="w"> </span>build
+</code></pre></div>
+<p><strong>Install:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>ninja<span class="w"> </span>-C<span class="w"> </span>build<span class="w"> </span>install
+</code></pre></div>
+<p><strong>Refresh the shared library cache:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>ldconfig
 </code></pre></div>
 <hr />
 <h2 id="phase-4-build-rpicam-apps-from-source">Phase 4: Build rpicam-apps from Source</h2>
 <p>These are the actual commands (<code>rpicam-jpeg</code>, <code>rpicam-vid</code>) you use to interact with the camera.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>~
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/raspberrypi/rpicam-apps.git
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">cd</span><span class="w"> </span>rpicam-apps
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Configure for headless Ubuntu — no GUI dependencies</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>meson<span class="w"> </span>setup<span class="w"> </span>build<span class="w"> </span>-Denable_libav<span class="o">=</span>disabled<span class="w"> </span>-Denable_drm<span class="o">=</span>enabled<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>-Denable_egl<span class="o">=</span>disabled<span class="w"> </span>-Denable_qt<span class="o">=</span>disabled<span class="w"> </span>-Denable_opencv<span class="o">=</span>disabled
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># Compile and install</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>ninja<span class="w"> </span>-C<span class="w"> </span>build
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>sudo<span class="w"> </span>ninja<span class="w"> </span>-C<span class="w"> </span>build<span class="w"> </span>install
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>sudo<span class="w"> </span>ldconfig
+<p><strong>Clone the repository:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd</span><span class="w"> </span>~
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/raspberrypi/rpicam-apps.git
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">cd</span><span class="w"> </span>rpicam-apps
+</code></pre></div>
+<p><strong>Configure for headless Ubuntu (no GUI dependencies):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>meson<span class="w"> </span>setup<span class="w"> </span>build<span class="w"> </span>-Denable_libav<span class="o">=</span>disabled<span class="w"> </span>-Denable_drm<span class="o">=</span>enabled<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>-Denable_egl<span class="o">=</span>disabled<span class="w"> </span>-Denable_qt<span class="o">=</span>disabled<span class="w"> </span>-Denable_opencv<span class="o">=</span>disabled
+</code></pre></div>
+<p><strong>Compile:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ninja<span class="w"> </span>-C<span class="w"> </span>build
+</code></pre></div>
+<p><strong>Install:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>ninja<span class="w"> </span>-C<span class="w"> </span>build<span class="w"> </span>install
+</code></pre></div>
+<p><strong>Refresh the shared library cache:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>ldconfig
 </code></pre></div>
 <hr />
 <h2 id="phase-5-capturing-media">Phase 5: Capturing Media</h2>
 <p><strong>Capture a photo:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>rpicam-jpeg<span class="w"> </span>-o<span class="w"> </span>lab_photo.jpg
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>rpicam-jpeg<span class="w"> </span>-o<span class="w"> </span>lab_photo.jpg
 </code></pre></div>
 <p><strong>Record a 10-second video:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>rpicam-vid<span class="w"> </span>-t<span class="w"> </span><span class="m">10000</span><span class="w"> </span>-o<span class="w"> </span>lab_video.h264
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>rpicam-vid<span class="w"> </span>-t<span class="w"> </span><span class="m">10000</span><span class="w"> </span>-o<span class="w"> </span>lab_video.h264
 </code></pre></div>
 <p><strong>Convert to MP4</strong> (needed for browser playback — <code>.h264</code> won't play directly):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ffmpeg<span class="w"> </span>-framerate<span class="w"> </span><span class="m">30</span><span class="w"> </span>-i<span class="w"> </span>lab_video.h264<span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span>lab_video.mp4
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ffmpeg<span class="w"> </span>-framerate<span class="w"> </span><span class="m">30</span><span class="w"> </span>-i<span class="w"> </span>lab_video.h264<span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span>lab_video.mp4
 </code></pre></div>
 <hr />
 <h2 id="phase-6-viewing-files-remotely">Phase 6: Viewing Files Remotely</h2>
-<p>Start a simple HTTP server in the folder where your files are saved:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span>
+<p><strong>Start a simple HTTP server in the folder where your files are saved:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
 <p>Then open your laptop's browser and go to:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>http://&lt;your_pi_ip&gt;:8000
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>http://&lt;your_pi_ip&gt;:8000
 </code></pre></div>
 <ul>
 <li>Click <code>lab_photo.jpg</code> to view the photo</li>
@@ -2450,17 +2464,16 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Run this inside the Pi's desktop terminal (via monitor or Remote Desktop):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rpicam-vid<span class="w"> </span>-t<span class="w"> </span><span class="m">0</span><span class="w"> </span>--inline<span class="w"> </span>-o<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>ffplay<span class="w"> </span>-window_title<span class="w"> </span><span class="s2">&quot;Live Feed&quot;</span><span class="w"> </span>-i<span class="w"> </span>-
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>rpicam-vid<span class="w"> </span>-t<span class="w"> </span><span class="m">0</span><span class="w"> </span>--inline<span class="w"> </span>-o<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>ffplay<span class="w"> </span>-window_title<span class="w"> </span><span class="s2">&quot;Live Feed&quot;</span><span class="w"> </span>-i<span class="w"> </span>-
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><strong>On the Pi:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>rpicam-vid<span class="w"> </span>-t<span class="w"> </span><span class="m">0</span><span class="w"> </span>--inline<span class="w"> </span>--listen<span class="w"> </span>-o<span class="w"> </span>tcp://0.0.0.0:8888
-</code></pre></div></p>
-<p><strong>On your laptop in VLC:</strong></p>
-<p>Press <code>Ctrl+N</code> and enter:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>tcp/h264://your_pi_ip:8888
-</code></pre></div></p>
+<p><strong>On the Pi:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>rpicam-vid<span class="w"> </span>-t<span class="w"> </span><span class="m">0</span><span class="w"> </span>--inline<span class="w"> </span>--listen<span class="w"> </span>-o<span class="w"> </span>tcp://0.0.0.0:8888
+</code></pre></div>
+<p><strong>On your laptop — open VLC, press <code>Ctrl+N</code> and enter:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>tcp/h264://your_pi_ip:8888
+</code></pre></div>
 </div>
 </div>
 </div>

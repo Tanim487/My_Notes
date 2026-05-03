@@ -24,15 +24,30 @@ The Pi 4 won't auto-detect the OV5647 Rev 1.3 sensor. You have to tell it manual
 sudo nano /boot/firmware/config.txt
 ```
 
-Add these lines at the bottom:
+Scroll to the bottom and make these **two changes**:
+
+**Step 1 — Comment out the auto-detect line.**
+This line already exists in the file by default. Find it and put a `#` in front of it to disable it:
 
 ```text
-# Disable auto-detect for older Rev 1.3 sensors
 #camera_auto_detect=1
+```
 
-# Manually load the driver for OV5647
+**Step 2 — Add the OV5647 driver line.**
+This line does **not** exist yet. Type it in on a new line:
+
+```text
 dtoverlay=ov5647
 ```
+
+After both changes, the bottom of your `config.txt` should look exactly like this:
+
+```text
+#camera_auto_detect=1
+dtoverlay=ov5647
+```
+
+Save and exit: `Ctrl+O` → `Enter` → `Ctrl+X`
 
 Then reboot:
 
