@@ -70,16 +70,20 @@ nav:
       - Methods: python/oops/methods.md
       - Encapsulation: python/oops/encapsulation.md
       - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
-  - Python libraries:
-      - Overview: python_libraries/index.md
-      - NumPy: python_libraries/numpy.md
-  - Conceptuals:
+    - Libraries:
+      - Overview: python_libraries/libraries/index.md
+      - NumPy: python_libraries/libraries/numpy.md
+  - Concepts:
     - Overview: conceptuals/index.md
     - Machine Learning:
       - Overview: conceptuals/ml/index.md
     - Deep Learning:
       - Overview: conceptuals/dl/index.md
       - Optimizers: conceptuals/dl/optimizers.md
+  - Guides:
+    - Overview: guides/index.md
+    - Raspberry Pi:
+      - Headless Setup: guides/raspberry-pi/headless-setup.md
   - JavaScript:
     - Overview: javascript/index.md
   - C:
