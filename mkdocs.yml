@@ -84,6 +84,7 @@ nav:
     - Overview: guides/index.md
     - Raspberry Pi:
       - Headless Setup: guides/raspberry-pi/headless-setup.md
+      - Camera Setup: guides/raspberry-pi/camera-setup.md
   - JavaScript:
     - Overview: javascript/index.md
   - C:
