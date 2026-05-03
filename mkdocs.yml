@@ -71,8 +71,8 @@ nav:
       - Encapsulation: python/oops/encapsulation.md
       - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
     - Libraries:
-      - Overview: python_libraries/libraries/index.md
-      - NumPy: python_libraries/libraries/numpy.md
+      - Overview: python_libraries/index.md
+      - NumPy: python_libraries/numpy.md
   - Concepts:
     - Overview: conceptuals/index.md
     - Machine Learning:
