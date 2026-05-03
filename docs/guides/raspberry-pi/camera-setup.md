@@ -47,18 +47,35 @@ sudo reboot
 
 ## Phase 2: Install Build Dependencies
 
-```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
+**Update the system:**
 
-# Install build tools and required libraries
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+**Install build tools and required libraries:**
+
+```bash
 sudo apt install -y git ninja-build pkg-config libepoxy-dev libjpeg-dev libtiff5-dev \
 libpng-dev libboost-dev libboost-program-options-dev libdrm-dev libexif-dev \
 python3-pip python3-jinja2 python3-yaml python3-ply libgnutls28-dev openssl libssl-dev
+```
 
-# Upgrade Meson — Ubuntu 22.04 default is too old
+**Remove the old Meson:**
+
+```bash
 sudo apt remove -y meson
+```
+
+**Install the latest Meson via pip:**
+
+```bash
 sudo pip3 install meson
+```
+
+**Clear the shell command cache so it picks up the new Meson:**
+
+```bash
 hash -r
 ```
 
@@ -71,19 +88,37 @@ hash -r
 
 Ubuntu's default `libcamera` package is incompatible with the Pi's camera stack. Building from source gives you proper hardware optimization.
 
+**Clone the repository:**
+
 ```bash
 cd ~
 git clone https://git.libcamera.org/libcamera/libcamera.git
 cd libcamera
+```
 
-# Configure for Raspberry Pi 4 (vc4 pipeline)
+**Configure for Raspberry Pi 4 (vc4 pipeline):**
+
+```bash
 meson setup build -Dpipelines=rpi/vc4 -Dipas=rpi/vc4 -Dv4l2=enabled \
 -Dgstreamer=disabled -Dtest=false -Dlc-compliance=disabled -Dcam=disabled \
 -Dqcam=disabled -Ddocumentation=disabled -Dprefix=/usr
+```
 
-# Compile and install
+**Compile:**
+
+```bash
 ninja -C build
+```
+
+**Install:**
+
+```bash
 sudo ninja -C build install
+```
+
+**Refresh the shared library cache:**
+
+```bash
 sudo ldconfig
 ```
 
@@ -93,18 +128,36 @@ sudo ldconfig
 
 These are the actual commands (`rpicam-jpeg`, `rpicam-vid`) you use to interact with the camera.
 
+**Clone the repository:**
+
 ```bash
 cd ~
 git clone https://github.com/raspberrypi/rpicam-apps.git
 cd rpicam-apps
+```
 
-# Configure for headless Ubuntu — no GUI dependencies
+**Configure for headless Ubuntu (no GUI dependencies):**
+
+```bash
 meson setup build -Denable_libav=disabled -Denable_drm=enabled \
 -Denable_egl=disabled -Denable_qt=disabled -Denable_opencv=disabled
+```
 
-# Compile and install
+**Compile:**
+
+```bash
 ninja -C build
+```
+
+**Install:**
+
+```bash
 sudo ninja -C build install
+```
+
+**Refresh the shared library cache:**
+
+```bash
 sudo ldconfig
 ```
 
@@ -134,7 +187,7 @@ ffmpeg -framerate 30 -i lab_video.h264 -c copy lab_video.mp4
 
 ## Phase 6: Viewing Files Remotely
 
-Start a simple HTTP server in the folder where your files are saved:
+**Start a simple HTTP server in the folder where your files are saved:**
 
 ```bash
 python3 -m http.server 8000
@@ -164,13 +217,13 @@ http://<your_pi_ip>:8000
 === "Method B — Stream to Laptop via VLC (Low Latency)"
 
     **On the Pi:**
+
     ```bash
     rpicam-vid -t 0 --inline --listen -o tcp://0.0.0.0:8888
     ```
 
-    **On your laptop in VLC:**
+    **On your laptop — open VLC, press `Ctrl+N` and enter:**
 
-    Press `Ctrl+N` and enter:
     ```
     tcp/h264://your_pi_ip:8888
     ```
