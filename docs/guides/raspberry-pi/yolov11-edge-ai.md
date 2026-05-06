@@ -127,7 +127,7 @@ Both scripts use two key optimizations:
         
         results = model(frame, verbose=False)[0]
         # results = model(frame, imgsz=320, verbose=False)[0]
-        
+
         inf_ms = (time.time() - t0) * 1000
         fps = fps * 0.8 + 0.2 * (1000.0 / max(inf_ms, 1.0))
 
@@ -136,8 +136,18 @@ Both scripts use two key optimizations:
                     cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2)
         cv2.imshow("Pi Camera YOLO Stream", annotated)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        # Listen for keyboard presses
+        key = cv2.waitKey(1) & 0xFF
+        
+        if key == ord('q'):
+            # Press 'q' to quit
             break
+        elif key == ord('p'):
+            # Press 'p' to take a picture!
+            timestamp = int(time.time())
+            filename = f"snapshot_{timestamp}.jpg"
+            cv2.imwrite(filename, annotated)
+            print(f"[SNAP!] Picture saved as: {filename}")
 
     cap.release()
     cv2.destroyAllWindows()
@@ -193,8 +203,18 @@ Both scripts use two key optimizations:
                     cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 0, 0), 2)
         cv2.imshow("USB Webcam YOLO Stream", annotated)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        # Listen for keyboard presses
+        key = cv2.waitKey(1) & 0xFF
+        
+        if key == ord('q'):
+            # Press 'q' to quit
             break
+        elif key == ord('p'):
+            # Press 'p' to take a picture!
+            timestamp = int(time.time())
+            filename = f"snapshot_{timestamp}.jpg"
+            cv2.imwrite(filename, annotated)
+            print(f"[SNAP!] Picture saved as: {filename}")
 
     cap.release()
     cv2.destroyAllWindows()
