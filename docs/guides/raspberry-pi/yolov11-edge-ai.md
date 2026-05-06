@@ -124,7 +124,10 @@ Both scripts use two key optimizations:
 
         # imgsz=320 doubles your FPS!
         t0 = time.time()
-        results = model(frame, imgsz=320, verbose=False)[0]
+        
+        results = model(frame, verbose=False)[0]
+        # results = model(frame, imgsz=320, verbose=False)[0]
+        
         inf_ms = (time.time() - t0) * 1000
         fps = fps * 0.8 + 0.2 * (1000.0 / max(inf_ms, 1.0))
 
@@ -178,7 +181,10 @@ Both scripts use two key optimizations:
             continue
 
         t0 = time.time()
-        results = model(frame, imgsz=320, verbose=False)[0]
+        
+        results = model(frame, verbose=False)[0]
+        # results = model(frame, imgsz=320, verbose=False)[0]
+
         inf_ms = (time.time() - t0) * 1000
         fps = fps * 0.8 + 0.2 * (1000.0 / max(inf_ms, 1.0))
 
