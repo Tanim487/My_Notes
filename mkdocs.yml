@@ -84,8 +84,9 @@ nav:
     - Overview: guides/index.md
     - Raspberry Pi:
       - Headless Setup: guides/raspberry-pi/headless-setup.md
-      - Camera Setup: guides/raspberry-pi/camera-setup.md
+      - Pi Camera Setup: guides/raspberry-pi/camera-setup.md
       - USB Webcam Setup: guides/raspberry-pi/usb-camera-setup.md
+      - YOLOv11 Edge AI: guides/raspberry-pi/yolov11-edge-ai.md
   - JavaScript:
     - Overview: javascript/index.md
   - C:
