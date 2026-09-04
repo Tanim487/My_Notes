@@ -4,6 +4,7 @@ site_author: Tanim
 
 theme:
   name: material
+
   palette:
     - scheme: slate
       primary: deep purple
@@ -11,15 +12,18 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+
     - scheme: default
       primary: deep purple
       accent: cyan
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+
   font:
     text: Roboto
     code: Roboto Mono
+
   features:
     - navigation.tabs
     - navigation.sections
@@ -30,16 +34,34 @@ theme:
     - content.code.copy
 
 markdown_extensions:
+
+  # Admonitions
   - admonition
+
+  # Code highlighting
   - pymdownx.highlight:
       anchor_linenums: true
+
+  # Fenced code blocks
   - pymdownx.superfences
+
+  # Clickable tabs
   - pymdownx.tabbed:
       alternate_style: true
+
+  # Collapsible sections
   - pymdownx.details
+
+  # Tables
   - tables
+
+  # HTML attributes
   - attr_list
+
+  # Markdown inside HTML
   - md_in_html
+
+  # Math / LaTeX
   - pymdownx.arithmatex:
       generic: true
 
@@ -48,48 +70,111 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
+
+  # =========================
+  # HOME
+  # =========================
   - Home: index.md
+
+  # =========================
+  # TOOLS
+  # =========================
+  - Tools:
+      - Overview: tools/index.md
+      - Git & GitHub: tools/git-github.md
+
+  # =========================
+  # PYTHON
+  # =========================
   - Python:
-    - Overview: python/index.md
-    - Basics:
-      - Data Types & Keywords: python/basics/data-types.md
-      - Operators: python/basics/operators.md
-      - Input & Type Casting: python/basics/input-casting.md
-      - Strings: python/basics/strings.md
-      - Conditional Statements: python/basics/conditionals.md
-      - Loops: python/basics/loops.md
-      - Functions & Recursion: python/basics/functions.md
-      - File I/O: python/basics/file-io.md
-    - Data Structures:
-      - Lists: python/data-structures/lists.md
-      - Tuples: python/data-structures/tuples.md
-      - Dictionaries: python/data-structures/dictionaries.md
-      - Sets: python/data-structures/sets.md
-    - OOP:
-      - Classes & Objects: python/oops/classes-objects.md
-      - Methods: python/oops/methods.md
-      - Encapsulation: python/oops/encapsulation.md
-      - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
-    - Libraries:
-      - Overview: python_libraries/index.md
-      - NumPy: python_libraries/numpy.md
+      - Overview: python/index.md
+
+      - Basics:
+          - Data Types & Keywords: python/basics/data-types.md
+          - Operators: python/basics/operators.md
+          - Input & Type Casting: python/basics/input-casting.md
+          - Strings: python/basics/strings.md
+          - Conditional Statements: python/basics/conditionals.md
+          - Loops: python/basics/loops.md
+          - Functions & Recursion: python/basics/functions.md
+          - File I/O: python/basics/file-io.md
+
+      - Data Structures:
+          - Lists: python/data-structures/lists.md
+          - Tuples: python/data-structures/tuples.md
+          - Dictionaries: python/data-structures/dictionaries.md
+          - Sets: python/data-structures/sets.md
+
+      - OOP:
+          - Classes & Objects: python/oops/classes-objects.md
+          - Methods: python/oops/methods.md
+          - Encapsulation: python/oops/encapsulation.md
+          - Inheritance & Polymorphism: python/oops/inheritance-polymorphism.md
+
+      - Libraries:
+          - Overview: python_libraries/index.md
+          - NumPy: python_libraries/numpy.md
+
+  # =========================
+  # CONCEPTS
+  # =========================
   - Concepts:
-    - Overview: conceptuals/index.md
-    - Machine Learning:
-      - Overview: conceptuals/ml/index.md
-    - Deep Learning:
-      - Overview: conceptuals/dl/index.md
-      - Optimizers: conceptuals/dl/optimizers.md
+      - Overview: conceptuals/index.md
+
+      - Machine Learning:
+          - Overview: conceptuals/ml/index.md
+
+      - Deep Learning:
+          - Overview: conceptuals/dl/index.md
+          - Optimizers: conceptuals/dl/optimizers.md
+
+  # =========================
+  # GUIDES
+  # =========================
   - Guides:
-    - Overview: guides/index.md
-    - Raspberry Pi:
-      - Headless Setup: guides/raspberry-pi/headless-setup.md
-      - Pi Camera Setup: guides/raspberry-pi/camera-setup.md
-      - USB Webcam Setup: guides/raspberry-pi/usb-camera-setup.md
-      - YOLOv11 Edge AI: guides/raspberry-pi/yolov11-edge-ai.md
+      - Overview: guides/index.md
+
+      - Raspberry Pi:
+          - Headless Setup: guides/raspberry-pi/headless-setup.md
+          - Pi Camera Setup: guides/raspberry-pi/camera-setup.md
+          - USB Webcam Setup: guides/raspberry-pi/usb-camera-setup.md
+          - YOLOv11 Edge AI: guides/raspberry-pi/yolov11-edge-ai.md
+
+  # =========================
+  # JAVASCRIPT
+  # =========================
   - JavaScript:
-    - Overview: javascript/index.md
+      - Overview: javascript/index.md
+
+  # =========================
+  # C
+  # =========================
   - C:
-    - Overview: c/index.md
+      - Overview: c/index.md
+
+  # =========================
+  # C++
+  # =========================
   - C++:
-    - Overview: cpp/index.md
+      - Overview: cpp/index.md
+
+  # =========================
+  # FRAMEWORKS
+  # =========================
+  - Frameworks:
+      - Overview: frameworks/index.md
+      - TypeScript:
+          - Overview: frameworks/typescript/index.md
+          - Basics: frameworks/typescript/basics.md
+          - Types: frameworks/typescript/types.md
+          - Functions: frameworks/typescript/functions.md
+          - Objects & Interfaces: frameworks/typescript/objects-interfaces.md
+          - Classes & OOP: frameworks/typescript/classes-oop.md
+          - Generics: frameworks/typescript/generics.md
+          - Type Narrowing: frameworks/typescript/type-narrowing.md
+          - Advanced Types: frameworks/typescript/advanced-types.md
+          - Utility Types: frameworks/typescript/utility-types.md
+          - Modules: frameworks/typescript/modules.md
+          - Tooling: frameworks/typescript/tooling.md
+          - Projects: frameworks/typescript/projects.md
+      - Typescript full: frameworks/typescriptcpy.md
