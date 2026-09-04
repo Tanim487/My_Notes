@@ -1,0 +1,4076 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal programming notes and cheatsheets">
+      
+      
+        <meta name="author" content="Tanim">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../python/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Git & GitHub - 📓 My Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-github-complete-beginner-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="📓 My Notes" class="md-header__button md-logo" aria-label="📓 My Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            📓 My Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git & GitHub
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python/" class="md-tabs__link">
+          
+  
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../conceptuals/" class="md-tabs__link">
+          
+  
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../javascript/index.md" class="md-tabs__link">
+          
+  
+  
+  JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../c/index.md" class="md-tabs__link">
+          
+  
+  
+  C
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cpp/index.md" class="md-tabs__link">
+          
+  
+  
+  C++
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../frameworks/" class="md-tabs__link">
+          
+  
+  
+  Frameworks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="📓 My Notes" class="md-nav__button md-logo" aria-label="📓 My Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    📓 My Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git & GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/data-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Types & Keywords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/input-casting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Type Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/conditionals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conditional Statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functions & Recursion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/basics/file-io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File I/O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Structures
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Structures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/data-structures/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/data-structures/tuples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tuples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/data-structures/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dictionaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/data-structures/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OOP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/oops/classes-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes & Objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/oops/methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/oops/encapsulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encapsulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/oops/inheritance-polymorphism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inheritance & Polymorphism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Libraries
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Libraries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_libraries/numpy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NumPy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concepts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptuals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptuals/ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deep Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptuals/dl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptuals/dl/optimizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimizers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Raspberry Pi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/raspberry-pi/headless-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Headless Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/raspberry-pi/camera-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pi Camera Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/raspberry-pi/usb-camera-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USB Webcam Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/raspberry-pi/yolov11-edge-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    YOLOv11 Edge AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JavaScript
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frameworks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Frameworks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeScript
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TypeScript
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/objects-interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objects & Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/classes-oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes & OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/generics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/type-narrowing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Narrowing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/advanced-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/utility-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utility Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/tooling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tooling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescript/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frameworks/typescriptcpy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Typescript full
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-github-complete-beginner-notes">Git &amp; GitHub — Complete Beginner Notes</h1>
+<blockquote>
+<p>A practical note for learning Git from the beginning.</p>
+<p>The goal of this note is not only to memorize commands, but to understand <strong>what Git is doing, why we use each command, and how Git and GitHub work together</strong>.</p>
+</blockquote>
+<hr />
+<!-- ## Table of Contents
+
+1. [What is Git?](#1-what-is-git)
+2. [Git vs GitHub](#2-git-vs-github)
+3. [Why Do We Need Git?](#3-why-do-we-need-git)
+4. [Install Git](#4-install-git)
+5. [Check Git Installation](#5-check-git-installation)
+6. [Git Configuration](#6-git-configuration)
+7. [Git's Basic Idea](#7-gits-basic-idea)
+8. [Create a Git Repository](#8-create-a-git-repository)
+9. [git status](#9-git-status)
+10. [The Three Important Areas](#10-the-three-important-areas)
+11. [git add](#11-git-add)
+12. [git commit](#12-git-commit)
+13. [The Basic Git Workflow](#13-the-basic-git-workflow)
+14. [git log](#14-git-log)
+15. [git diff](#15-git-diff)
+16. [Working with Multiple Files](#16-working-with-multiple-files)
+17. [The .gitignore File](#17-the-gitignore-file)
+18. [Branches](#18-branches)
+19. [Create and Switch Branches](#19-create-and-switch-branches)
+20. [Merge](#20-merge)
+21. [Merge Conflicts](#21-merge-conflicts)
+22. [Remote Repository](#22-remote-repository)
+23. [GitHub](#23-github)
+24. [git remote](#24-git-remote)
+25. [git clone](#25-git-clone)
+26. [git push](#26-git-push)
+27. [git pull](#27-git-pull)
+28. [git fetch](#28-git-fetch)
+29. [Clone vs Pull](#29-clone-vs-pull)
+30. [Fork](#30-fork)
+31. [Pull Request](#31-pull-request)
+32. [git restore](#32-git-restore)
+33. [git reset](#33-git-reset)
+34. [git stash](#34-git-stash)
+35. [git tag](#35-git-tag)
+36. [GitHub Pages and Deployment](#36-github-pages-and-deployment)
+37. [MkDocs + Git Workflow](#37-mkdocs--git-workflow)
+38. [A Real Example](#38-a-real-example)
+39. [Common Mistakes](#39-common-mistakes)
+40. [Useful Commands Cheat Sheet](#40-useful-commands-cheat-sheet)
+41. [A Simple Mental Model](#41-a-simple-mental-model)
+
+--- -->
+
+<h1 id="1-what-is-git">1. What is Git?</h1>
+<p>Git is a <strong>version control system</strong>.</p>
+<p>Version control means:</p>
+<blockquote>
+<p>Git keeps track of changes made to our files over time.</p>
+</blockquote>
+<p>For example, suppose we have:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>project/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── index.html
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── style.css
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── script.js
+</code></pre></div>
+<p>Today everything works.</p>
+<p>Tomorrow we change <code>script.js</code> and something breaks.</p>
+<p>Without Git, we may have to remember what we changed.</p>
+<p>With Git, we can see:</p>
+<ul>
+<li>what changed</li>
+<li>when it changed</li>
+<li>who changed it</li>
+<li>previous versions of the project</li>
+<li>which changes belong to which version</li>
+</ul>
+<p>So Git is basically a system for <strong>tracking the history of a project</strong>.</p>
+<hr />
+<h1 id="2-git-vs-github">2. Git vs GitHub</h1>
+<p>This is one of the most important things to understand.</p>
+<h2 id="git">Git</h2>
+<p>Git is the actual <strong>version control software</strong> running on our computer.</p>
+<p>We use commands like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>init
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>add
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>commit
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>git<span class="w"> </span>branch
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>git<span class="w"> </span>merge
+</code></pre></div>
+<p>Git can work completely without GitHub.</p>
+<hr />
+<h2 id="github">GitHub</h2>
+<p>GitHub is an online platform where Git repositories can be stored and shared.</p>
+<p>So:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Git
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>↓
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>works on our computer
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>GitHub
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>↓
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>stores/shares Git repositories online
+</code></pre></div>
+<p>Git is the tool.</p>
+<p>GitHub is an online service that works with Git repositories.</p>
+<hr />
+<h1 id="3-why-do-we-need-git">3. Why Do We Need Git?</h1>
+<p>Imagine we are developing a project.</p>
+<p>At different times, we might have:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>project-final
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>project-final-2
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>project-final-new
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>project-final-new-real
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>project-final-new-real-2
+</code></pre></div>
+<p>This becomes difficult to manage.</p>
+<p>Git solves this problem.</p>
+<p>Instead of making many copies, Git stores the history:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Version 1
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   ↓
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Version 2
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   ↓
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Version 3
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>   ↓
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Version 4
+</code></pre></div>
+<p>We can move through the project's history when necessary.</p>
+<hr />
+<h1 id="4-install-git">4. Install Git</h1>
+<p>First install Git on the computer.</p>
+<p>After installation, Git commands become available in the terminal.</p>
+<p>On Windows, Git Bash is also commonly installed with Git.</p>
+<hr />
+<h1 id="5-check-git-installation">5. Check Git Installation</h1>
+<p>Open a terminal and run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>--version
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git version 2.x.x
+</code></pre></div>
+<p>If a version appears, Git is installed.</p>
+<hr />
+<h1 id="6-git-configuration">6. Git Configuration</h1>
+<p>Before making commits, we normally configure our name and email.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Tanim&quot;</span>
+</code></pre></div>
+<p>Set email:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your-email@example.com&quot;</span>
+</code></pre></div>
+<p>Check the configuration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--list
+</code></pre></div>
+<h3 id="why-do-we-need-this">Why do we need this?</h3>
+<p>Every commit has information about the person who created it.</p>
+<p>So Git records:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Author: Tanim
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Email: your-email@example.com
+</code></pre></div>
+<hr />
+<h1 id="7-gits-basic-idea">7. Git's Basic Idea</h1>
+<p>The most important Git concept is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Working Directory
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>       ↓
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>   git add
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>       ↓
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>Staging Area
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>       ↓
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a> git commit
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>       ↓
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>Git Repository
+</code></pre></div>
+<p>We should understand this before memorizing commands.</p>
+<hr />
+<h1 id="8-create-a-git-repository">8. Create a Git Repository</h1>
+<p>Suppose we have a project:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>my-project/
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>├── index.html
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>├── style.css
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>└── script.js
+</code></pre></div>
+<p>Open the terminal inside the project folder.</p>
+<p>Run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>init
+</code></pre></div>
+<p>Git will create a hidden <code>.git</code> directory.</p>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>my-project/
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>├── .git/
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>├── index.html
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>├── style.css
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>└── script.js
+</code></pre></div>
+<p>The <code>.git</code> directory contains Git's internal repository information and history.</p>
+<h3 id="important">Important</h3>
+<p>Do not manually edit or delete <code>.git</code>.</p>
+<p>If <code>.git</code> is deleted, that local Git repository's history/configuration is removed from that folder.</p>
+<hr />
+<h1 id="9-git-status">9. git status</h1>
+<p>This is one of the commands we will use most often.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>It tells us the current state of the repository.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>On branch main
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Untracked files:
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  index.html
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>  style.css
+</code></pre></div>
+<p>This means Git sees the files, but they are not currently being tracked.</p>
+<h3 id="very-useful-habit">Very useful habit</h3>
+<p>When confused, run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>It often tells us what is happening and what Git expects next.</p>
+<hr />
+<h1 id="10-the-three-important-areas">10. The Three Important Areas</h1>
+<p>Git can be understood using three main areas.</p>
+<h2 id="1-working-directory">1. Working Directory</h2>
+<p>This is the actual project files we edit.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>index.html
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>script.js
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>style.css
+</code></pre></div>
+<hr />
+<h2 id="2-staging-area">2. Staging Area</h2>
+<p>This is where we prepare changes that should go into the next commit.</p>
+<p>We use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>add
+</code></pre></div>
+<hr />
+<h2 id="3-repository">3. Repository</h2>
+<p>This contains committed history.</p>
+<p>We use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>commit
+</code></pre></div>
+<p>So:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Edit files
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>   ↓
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Working Directory
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>   ↓
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>git add
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>   ↓
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>Staging Area
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>   ↓
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>git commit
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>   ↓
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>Repository
+</code></pre></div>
+<hr />
+<h1 id="11-git-add">11. git add</h1>
+<p>Suppose we changed <code>script.js</code>.</p>
+<p>Check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>Then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>add<span class="w"> </span>script.js
+</code></pre></div>
+<p>Now the change is staged.</p>
+<p>Check again:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>Git will show that <code>script.js</code> is ready to be committed.</p>
+<hr />
+<h2 id="add-multiple-files">Add multiple files</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>add<span class="w"> </span>index.html<span class="w"> </span>style.css<span class="w"> </span>script.js
+</code></pre></div>
+<hr />
+<h2 id="add-everything">Add everything</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>This stages changes in the current directory and its subdirectories.</p>
+<h3 id="important_1">Important</h3>
+<p><code>git add .</code> does <strong>not</strong> mean "save the project permanently".</p>
+<p>It only prepares the changes for the next commit.</p>
+<hr />
+<h1 id="12-git-commit">12. git commit</h1>
+<p>After staging the changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add homepage&quot;</span>
+</code></pre></div>
+<p>A commit is a saved point in the Git history.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>commit 1
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>&quot;Create project&quot;
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>commit 2
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>&quot;Add navigation&quot;
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>commit 3
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>&quot;Fix navbar&quot;
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>commit 4
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>&quot;Add TypeScript notes&quot;
+</code></pre></div>
+<p>The message should describe what the commit does.</p>
+<p>Good:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add TypeScript notes&quot;</span>
+</code></pre></div>
+<p>Good:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Fix navigation links&quot;</span>
+</code></pre></div>
+<p>Less useful:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;update&quot;</span>
+</code></pre></div>
+<hr />
+<h1 id="13-the-basic-git-workflow">13. The Basic Git Workflow</h1>
+<p>This is the workflow we will use again and again.</p>
+<h3 id="step-1-change-files">Step 1 — Change files</h3>
+<p>Edit the project normally.</p>
+<h3 id="step-2-check-what-changed">Step 2 — Check what changed</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<h3 id="step-3-stage-the-changes">Step 3 — Stage the changes</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<h3 id="step-4-commit">Step 4 — Commit</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Describe the changes&quot;</span>
+</code></pre></div>
+<p>So the basic workflow is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Edit
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a> ↓
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>git status
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a> ↓
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>git add .
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a> ↓
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>git commit -m &quot;message&quot;
+</code></pre></div>
+<p>If the project is connected to GitHub, there is usually another step:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>git push
+</code></pre></div>
+<p>So:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Edit
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a> ↓
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>git status
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a> ↓
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>git add .
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a> ↓
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>git commit
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a> ↓
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>git push
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a> ↓
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>GitHub
+</code></pre></div>
+<hr />
+<h1 id="14-git-log">14. git log</h1>
+<p>To see commit history:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>git<span class="w"> </span>log
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>commit abc123...
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>Author: Tanim
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Date: ...
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>    Add TypeScript notes
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>commit def456...
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>Author: Tanim
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>Date: ...
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>    Add JavaScript notes
+</code></pre></div>
+<p>A shorter version:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>abc1234 Add TypeScript notes
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>def4567 Add JavaScript notes
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>123abcd Create website
+</code></pre></div>
+<p>This is much easier to read.</p>
+<hr />
+<h1 id="15-git-diff">15. git diff</h1>
+<p><code>git diff</code> shows changes that have not been staged yet.</p>
+<p>Suppose we change:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>console.log(&quot;Hello&quot;)
+</code></pre></div>
+<p>to:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>console.log(&quot;Hello World&quot;)
+</code></pre></div>
+<p>Run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>git<span class="w"> </span>diff
+</code></pre></div>
+<p>Git shows what changed.</p>
+<p>This is useful before running:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>because we can inspect our changes first.</p>
+<hr />
+<h2 id="difference-between-status-and-diff">Difference between status and diff</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>tells us <strong>which files changed</strong> and their Git state.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>git<span class="w"> </span>diff
+</code></pre></div>
+<p>shows <strong>the actual content changes</strong>.</p>
+<hr />
+<h1 id="16-working-with-multiple-files">16. Working with Multiple Files</h1>
+<p>Suppose we changed:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>index.html
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>style.css
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>script.js
+</code></pre></div>
+<p>We can stage all:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>Then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update website&quot;</span>
+</code></pre></div>
+<p>But sometimes we only want some changes.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>git<span class="w"> </span>add<span class="w"> </span>index.html
+</code></pre></div>
+<p>Then only <code>index.html</code> is staged.</p>
+<p>This is useful when changes belong to different tasks.</p>
+<hr />
+<h1 id="17-the-gitignore-file">17. The .gitignore File</h1>
+<p>Some files should not be uploaded to Git.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>node_modules/
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>.env
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>dist/
+</code></pre></div>
+<p>We can create:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>.gitignore
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>node_modules/
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>.env
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>dist/
+</code></pre></div>
+<p>Now Git will ignore those paths when deciding what untracked files to report.</p>
+<hr />
+<h2 id="why-ignore-node_modules">Why ignore node_modules?</h2>
+<p>Node projects can contain thousands of installed dependency files.</p>
+<p>Instead of uploading the entire <code>node_modules</code> folder, we normally keep the dependency information in files such as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>package.json
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>package-lock.json
+</code></pre></div>
+<p>Then another developer can install dependencies with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>npm<span class="w"> </span>install
+</code></pre></div>
+<hr />
+<h2 id="why-ignore-env">Why ignore .env?</h2>
+<p><code>.env</code> files may contain secrets such as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>API_KEY=...
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>DATABASE_PASSWORD=...
+</code></pre></div>
+<p>We should not accidentally publish secrets to GitHub.</p>
+<hr />
+<h1 id="18-branches">18. Branches</h1>
+<p>A branch allows us to work on a separate line of development.</p>
+<p>Suppose our main project is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>main
+</code></pre></div>
+<p>We want to add a new feature.</p>
+<p>Instead of directly changing <code>main</code>, we can create:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>feature/navbar
+</code></pre></div>
+<p>Now:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>main
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>  \
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>   feature/navbar
+</code></pre></div>
+<p>We work on the feature branch.</p>
+<p>After the feature is finished, we can merge it back into <code>main</code>.</p>
+<hr />
+<h1 id="19-create-and-switch-branches">19. Create and Switch Branches</h1>
+<p>See current branch:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>git<span class="w"> </span>branch
+</code></pre></div>
+<p>Create a branch:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>git<span class="w"> </span>branch<span class="w"> </span>feature-navbar
+</code></pre></div>
+<p>Switch to it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>git<span class="w"> </span>switch<span class="w"> </span>feature-navbar
+</code></pre></div>
+<p>A convenient command creates and switches at the same time:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature-navbar
+</code></pre></div>
+<p>Now we are working on:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>feature-navbar
+</code></pre></div>
+<hr />
+<h2 id="older-command">Older command</h2>
+<p>You may also see:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-navbar
+</code></pre></div>
+<p>This is still widely encountered.</p>
+<p>For learning the newer workflow, <code>git switch</code> is easier to understand because it is specifically designed for branch switching.</p>
+<hr />
+<h1 id="20-merge">20. Merge</h1>
+<p>Suppose we have:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>main
+<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>feature-navbar
+</code></pre></div>
+<p>We finished the feature.</p>
+<p>First switch to <code>main</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+</code></pre></div>
+<p>Then merge:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>git<span class="w"> </span>merge<span class="w"> </span>feature-navbar
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>feature-navbar
+<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>       \
+<a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a>        → main
+</code></pre></div>
+<p>The changes from the feature branch are brought into <code>main</code>.</p>
+<hr />
+<h1 id="21-merge-conflicts">21. Merge Conflicts</h1>
+<p>Sometimes Git cannot automatically merge two changes.</p>
+<p>Example:</p>
+<p>On one branch:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Another branch changes the same line to:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Git may not know which version should win.</p>
+<p>This creates a <strong>merge conflict</strong>.</p>
+<p>Git may mark the file like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>const title = &quot;Hello&quot;;
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>=======
+<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>const title = &quot;Hello World&quot;;
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-navbar
+</code></pre></div>
+<p>We manually decide which code should remain.</p>
+<p>Then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>and create the merge commit if Git requires one:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>git<span class="w"> </span>commit
+</code></pre></div>
+<h3 id="important-idea">Important idea</h3>
+<p>A merge conflict is not necessarily an error in Git.</p>
+<p>It means:</p>
+<blockquote>
+<p>Git needs a human to decide which conflicting change should remain.</p>
+</blockquote>
+<hr />
+<h1 id="22-remote-repository">22. Remote Repository</h1>
+<p>Until now we have mostly talked about Git on our computer.</p>
+<p>A <strong>remote repository</strong> is another Git repository, usually hosted somewhere online.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>Local repository
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>       ↓
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a>   Internet
+<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a>       ↓
+<a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a>Remote repository
+</code></pre></div>
+<p>GitHub is a common place to host the remote repository.</p>
+<hr />
+<h1 id="23-github">23. GitHub</h1>
+<p>GitHub allows us to:</p>
+<ul>
+<li>store Git repositories online</li>
+<li>collaborate with other developers</li>
+<li>review code</li>
+<li>create pull requests</li>
+<li>manage issues</li>
+<li>publish websites</li>
+<li>keep a backup of our repository</li>
+</ul>
+<p>A common setup is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>Your computer
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>   ↓
+<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a>Local Git repository
+<a id="__codelineno-78-4" name="__codelineno-78-4" href="#__codelineno-78-4"></a>   ↓
+<a id="__codelineno-78-5" name="__codelineno-78-5" href="#__codelineno-78-5"></a>GitHub
+<a id="__codelineno-78-6" name="__codelineno-78-6" href="#__codelineno-78-6"></a>   ↓
+<a id="__codelineno-78-7" name="__codelineno-78-7" href="#__codelineno-78-7"></a>Remote Git repository
+</code></pre></div>
+<hr />
+<h1 id="24-git-remote">24. git remote</h1>
+<p>To see configured remote repositories:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>origin  https://github.com/username/project.git (fetch)
+<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a>origin  https://github.com/username/project.git (push)
+</code></pre></div>
+<p>Usually the remote is named:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>origin
+</code></pre></div>
+<p><code>origin</code> is just a conventional name.</p>
+<p>It is not a special requirement that the remote must be called <code>origin</code>.</p>
+<hr />
+<h2 id="add-a-remote">Add a remote</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/username/project.git
+</code></pre></div>
+<p>Check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</code></pre></div>
+<hr />
+<h1 id="25-git-clone">25. git clone</h1>
+<p>Suppose a project already exists on GitHub.</p>
+<p>We want to download the repository to our computer.</p>
+<p>Use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/project.git
+</code></pre></div>
+<p>Git will:</p>
+<ul>
+<li>download the repository</li>
+<li>create a local project directory</li>
+<li>bring the Git history</li>
+<li>configure the remote repository</li>
+</ul>
+<p>Then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="nb">cd</span><span class="w"> </span>project
+</code></pre></div>
+<hr />
+<h1 id="26-git-push">26. git push</h1>
+<p><code>git push</code> sends local commits to a remote repository.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>For the first push of a new branch, we may use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>The <code>-u</code> option sets the upstream relationship so future pushes can usually be shorter:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<hr />
+<h1 id="27-git-pull">27. git pull</h1>
+<p><code>git pull</code> brings changes from the remote repository into the current local branch.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>GitHub
+<a id="__codelineno-90-2" name="__codelineno-90-2" href="#__codelineno-90-2"></a>  ↓
+<a id="__codelineno-90-3" name="__codelineno-90-3" href="#__codelineno-90-3"></a>git pull
+<a id="__codelineno-90-4" name="__codelineno-90-4" href="#__codelineno-90-4"></a>  ↓
+<a id="__codelineno-90-5" name="__codelineno-90-5" href="#__codelineno-90-5"></a>Your local repository
+</code></pre></div>
+<p>This is useful when the remote repository has changes that your local repository does not have.</p>
+<hr />
+<h1 id="28-git-fetch">28. git fetch</h1>
+<p><code>git fetch</code> downloads information about changes from the remote repository without automatically merging those changes into the current branch.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>git<span class="w"> </span>fetch
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>GitHub
+<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>  ↓
+<a id="__codelineno-92-3" name="__codelineno-92-3" href="#__codelineno-92-3"></a>git fetch
+<a id="__codelineno-92-4" name="__codelineno-92-4" href="#__codelineno-92-4"></a>  ↓
+<a id="__codelineno-92-5" name="__codelineno-92-5" href="#__codelineno-92-5"></a>Local Git knows about remote changes
+</code></pre></div>
+<p>But your current working branch is not automatically updated by the fetch itself.</p>
+<p>This makes <code>fetch</code> useful when we want to inspect remote changes before deciding what to do.</p>
+<hr />
+<h1 id="29-clone-vs-pull">29. Clone vs Pull</h1>
+<p>These are commonly confused.</p>
+<h2 id="git-clone">git clone</h2>
+<p>Used when we <strong>do not have the repository locally yet</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a>git<span class="w"> </span>clone<span class="w"> </span>URL
+</code></pre></div>
+<p>Think:</p>
+<blockquote>
+<p>"Give me this repository for the first time."</p>
+</blockquote>
+<hr />
+<h2 id="git-pull">git pull</h2>
+<p>Used when we <strong>already have a local copy</strong> and want newer remote changes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Think:</p>
+<blockquote>
+<p>"Update my existing local repository."</p>
+</blockquote>
+<hr />
+<h1 id="30-fork">30. Fork</h1>
+<p>A <strong>fork</strong> is a GitHub feature.</p>
+<p>Suppose another developer has a repository and we want our own GitHub copy of it.</p>
+<p>We can fork it.</p>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a>Other person&#39;s repository
+<a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a>          ↓
+<a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a>        Fork
+<a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a>          ↓
+<a id="__codelineno-95-5" name="__codelineno-95-5" href="#__codelineno-95-5"></a>Your GitHub repository
+</code></pre></div>
+<p>A fork is especially useful when contributing to projects where we do not have direct write access.</p>
+<hr />
+<h1 id="31-pull-request">31. Pull Request</h1>
+<p>A Pull Request (PR) is a request to merge changes from one branch/repository into another.</p>
+<p>Typical workflow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>Fork repository
+<a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>      ↓
+<a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a>Clone repository
+<a id="__codelineno-96-4" name="__codelineno-96-4" href="#__codelineno-96-4"></a>      ↓
+<a id="__codelineno-96-5" name="__codelineno-96-5" href="#__codelineno-96-5"></a>Create branch
+<a id="__codelineno-96-6" name="__codelineno-96-6" href="#__codelineno-96-6"></a>      ↓
+<a id="__codelineno-96-7" name="__codelineno-96-7" href="#__codelineno-96-7"></a>Make changes
+<a id="__codelineno-96-8" name="__codelineno-96-8" href="#__codelineno-96-8"></a>      ↓
+<a id="__codelineno-96-9" name="__codelineno-96-9" href="#__codelineno-96-9"></a>Commit
+<a id="__codelineno-96-10" name="__codelineno-96-10" href="#__codelineno-96-10"></a>      ↓
+<a id="__codelineno-96-11" name="__codelineno-96-11" href="#__codelineno-96-11"></a>Push branch
+<a id="__codelineno-96-12" name="__codelineno-96-12" href="#__codelineno-96-12"></a>      ↓
+<a id="__codelineno-96-13" name="__codelineno-96-13" href="#__codelineno-96-13"></a>Create Pull Request
+<a id="__codelineno-96-14" name="__codelineno-96-14" href="#__codelineno-96-14"></a>      ↓
+<a id="__codelineno-96-15" name="__codelineno-96-15" href="#__codelineno-96-15"></a>Review
+<a id="__codelineno-96-16" name="__codelineno-96-16" href="#__codelineno-96-16"></a>      ↓
+<a id="__codelineno-96-17" name="__codelineno-96-17" href="#__codelineno-96-17"></a>Merge
+</code></pre></div>
+<p>Pull Requests are heavily used in collaborative development.</p>
+<hr />
+<h1 id="32-git-restore">32. git restore</h1>
+<p>Sometimes we change a file but decide we do not want those changes.</p>
+<p>Suppose:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>script.js
+</code></pre></div>
+<p>was modified.</p>
+<p>We can restore the working-tree version from the last recorded state:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>git<span class="w"> </span>restore<span class="w"> </span>script.js
+</code></pre></div>
+<h3 id="important_2">Important</h3>
+<p>This discards the uncommitted changes in that file.</p>
+<p>So be careful.</p>
+<p>Do not use it on changes you may still need.</p>
+<hr />
+<h2 id="unstage-a-file">Unstage a file</h2>
+<p>Suppose we ran:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>git<span class="w"> </span>add<span class="w"> </span>script.js
+</code></pre></div>
+<p>but we do not want it staged anymore.</p>
+<p>Use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>script.js
+</code></pre></div>
+<p>This removes the file from the staging area but keeps the changes in the working directory.</p>
+<hr />
+<h1 id="33-git-reset">33. git reset</h1>
+<p><code>git reset</code> can move the current branch's history pointer and/or change staging state.</p>
+<p>Because it can be destructive, beginners should use it carefully.</p>
+<p>A common use is unstaging:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a>git<span class="w"> </span>reset<span class="w"> </span>HEAD<span class="w"> </span>script.js
+</code></pre></div>
+<p>This is an older/common form of removing a file from the staging area.</p>
+<p>Modern Git documentation often encourages:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>script.js
+</code></pre></div>
+<p>for this specific task.</p>
+<hr />
+<h2 id="resetting-a-commit">Resetting a commit</h2>
+<p>You may encounter:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+</code></pre></div>
+<p>This moves the branch back one commit while keeping the changes staged.</p>
+<p>Another form:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
+</code></pre></div>
+<p>moves the branch back one commit and keeps the changes in the working directory but unstaged.</p>
+<p>A dangerous form is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
+</code></pre></div>
+<p>This can discard changes.</p>
+<h3 id="beginner-rule">Beginner rule</h3>
+<p>Do not use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard
+</code></pre></div>
+<p>unless you understand exactly what changes will be removed.</p>
+<hr />
+<h1 id="34-git-stash">34. git stash</h1>
+<p>Sometimes we have unfinished work but need to temporarily switch branches.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a>You are working on feature A
+<a id="__codelineno-107-2" name="__codelineno-107-2" href="#__codelineno-107-2"></a>        ↓
+<a id="__codelineno-107-3" name="__codelineno-107-3" href="#__codelineno-107-3"></a>Something urgent needs to be fixed on main
+<a id="__codelineno-107-4" name="__codelineno-107-4" href="#__codelineno-107-4"></a>        ↓
+<a id="__codelineno-107-5" name="__codelineno-107-5" href="#__codelineno-107-5"></a>But your current work is not ready to commit
+</code></pre></div>
+<p>We can temporarily store the changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a>git<span class="w"> </span>stash
+</code></pre></div>
+<p>Now the working directory becomes clean.</p>
+<p>We can switch branches:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+</code></pre></div>
+<p>After finishing the urgent work, return to the previous branch.</p>
+<p>Then restore the stashed changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a>git<span class="w"> </span>stash<span class="w"> </span>pop
+</code></pre></div>
+<p>Conceptually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a>Unfinished changes
+<a id="__codelineno-111-2" name="__codelineno-111-2" href="#__codelineno-111-2"></a>       ↓
+<a id="__codelineno-111-3" name="__codelineno-111-3" href="#__codelineno-111-3"></a>   git stash
+<a id="__codelineno-111-4" name="__codelineno-111-4" href="#__codelineno-111-4"></a>       ↓
+<a id="__codelineno-111-5" name="__codelineno-111-5" href="#__codelineno-111-5"></a>Temporary storage
+<a id="__codelineno-111-6" name="__codelineno-111-6" href="#__codelineno-111-6"></a>       ↓
+<a id="__codelineno-111-7" name="__codelineno-111-7" href="#__codelineno-111-7"></a>Work somewhere else
+<a id="__codelineno-111-8" name="__codelineno-111-8" href="#__codelineno-111-8"></a>       ↓
+<a id="__codelineno-111-9" name="__codelineno-111-9" href="#__codelineno-111-9"></a>   git stash pop
+<a id="__codelineno-111-10" name="__codelineno-111-10" href="#__codelineno-111-10"></a>       ↓
+<a id="__codelineno-111-11" name="__codelineno-111-11" href="#__codelineno-111-11"></a>Changes return
+</code></pre></div>
+<hr />
+<h1 id="35-git-tag">35. git tag</h1>
+<p>A tag can mark a specific point in Git history.</p>
+<p>Tags are commonly used for releases.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-112-1" name="__codelineno-112-1" href="#__codelineno-112-1"></a>git<span class="w"> </span>tag<span class="w"> </span>v1.0.0
+</code></pre></div>
+<p>Then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+</code></pre></div>
+<p>A project might have:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a>v1.0.0
+<a id="__codelineno-114-2" name="__codelineno-114-2" href="#__codelineno-114-2"></a>v1.1.0
+<a id="__codelineno-114-3" name="__codelineno-114-3" href="#__codelineno-114-3"></a>v2.0.0
+</code></pre></div>
+<p>This makes important versions easy to identify.</p>
+<hr />
+<h1 id="36-github-pages-and-deployment">36. GitHub Pages and Deployment</h1>
+<p>GitHub can also host static websites through GitHub Pages.</p>
+<p>For example, a repository can contain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-115-1" name="__codelineno-115-1" href="#__codelineno-115-1"></a>HTML
+<a id="__codelineno-115-2" name="__codelineno-115-2" href="#__codelineno-115-2"></a>CSS
+<a id="__codelineno-115-3" name="__codelineno-115-3" href="#__codelineno-115-3"></a>JavaScript
+</code></pre></div>
+<p>and GitHub Pages can publish the site.</p>
+<p>For a documentation project such as MkDocs, the workflow can be:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a>Edit Markdown
+<a id="__codelineno-116-2" name="__codelineno-116-2" href="#__codelineno-116-2"></a>      ↓
+<a id="__codelineno-116-3" name="__codelineno-116-3" href="#__codelineno-116-3"></a>Build documentation
+<a id="__codelineno-116-4" name="__codelineno-116-4" href="#__codelineno-116-4"></a>      ↓
+<a id="__codelineno-116-5" name="__codelineno-116-5" href="#__codelineno-116-5"></a>Deploy generated site
+<a id="__codelineno-116-6" name="__codelineno-116-6" href="#__codelineno-116-6"></a>      ↓
+<a id="__codelineno-116-7" name="__codelineno-116-7" href="#__codelineno-116-7"></a>GitHub Pages
+<a id="__codelineno-116-8" name="__codelineno-116-8" href="#__codelineno-116-8"></a>      ↓
+<a id="__codelineno-116-9" name="__codelineno-116-9" href="#__codelineno-116-9"></a>Website
+</code></pre></div>
+<hr />
+<h1 id="37-mkdocs-git-workflow">37. MkDocs + Git Workflow</h1>
+<p>For our notes website, we have a project like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a>My_Notes/
+<a id="__codelineno-117-2" name="__codelineno-117-2" href="#__codelineno-117-2"></a>├── docs/
+<a id="__codelineno-117-3" name="__codelineno-117-3" href="#__codelineno-117-3"></a>│   ├── python/
+<a id="__codelineno-117-4" name="__codelineno-117-4" href="#__codelineno-117-4"></a>│   ├── javascripts/
+<a id="__codelineno-117-5" name="__codelineno-117-5" href="#__codelineno-117-5"></a>│   ├── frameworks/
+<a id="__codelineno-117-6" name="__codelineno-117-6" href="#__codelineno-117-6"></a>│   │   └── typescript.md
+<a id="__codelineno-117-7" name="__codelineno-117-7" href="#__codelineno-117-7"></a>│   └── index.md
+<a id="__codelineno-117-8" name="__codelineno-117-8" href="#__codelineno-117-8"></a>│
+<a id="__codelineno-117-9" name="__codelineno-117-9" href="#__codelineno-117-9"></a>├── mkdocs.yml
+<a id="__codelineno-117-10" name="__codelineno-117-10" href="#__codelineno-117-10"></a>└── ...
+</code></pre></div>
+<p>When we add or edit a note:</p>
+<h3 id="step-1">Step 1</h3>
+<p>Edit the Markdown file.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a>docs/frameworks/typescript.md
+</code></pre></div>
+<h3 id="step-2">Step 2</h3>
+<p>Run the local server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-119-1" name="__codelineno-119-1" href="#__codelineno-119-1"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<p>This lets us preview the website locally.</p>
+<p>Usually the local address looks like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a>http://127.0.0.1:8000/
+</code></pre></div>
+<h3 id="step-3">Step 3</h3>
+<p>Check the page.</p>
+<p>Make sure:</p>
+<ul>
+<li>headings work</li>
+<li>table of contents works</li>
+<li>code blocks look correct</li>
+<li>tabs work</li>
+<li>links work</li>
+<li>navigation works</li>
+</ul>
+<h3 id="step-4">Step 4</h3>
+<p>Stop the server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a>Ctrl + C
+</code></pre></div>
+<h3 id="step-5">Step 5</h3>
+<p>Build the site:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-122-1" name="__codelineno-122-1" href="#__codelineno-122-1"></a>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+</code></pre></div>
+<p>This helps detect documentation/configuration problems.</p>
+<h3 id="step-6">Step 6</h3>
+<p>Commit the changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-123-2" name="__codelineno-123-2" href="#__codelineno-123-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add TypeScript notes&quot;</span>
+</code></pre></div>
+<h3 id="step-7">Step 7</h3>
+<p>Push to GitHub:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-124-1" name="__codelineno-124-1" href="#__codelineno-124-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>If the project uses <code>mkdocs gh-deploy</code> for GitHub Pages deployment, the deployment command can be:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-125-1" name="__codelineno-125-1" href="#__codelineno-125-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<p>The exact deployment command depends on how the repository is configured.</p>
+<hr />
+<h1 id="38-a-real-example">38. A Real Example</h1>
+<p>Suppose we add:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-126-1" name="__codelineno-126-1" href="#__codelineno-126-1"></a>docs/frameworks/typescript.md
+</code></pre></div>
+<p>and modify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-127-1" name="__codelineno-127-1" href="#__codelineno-127-1"></a>mkdocs.yml
+</code></pre></div>
+<p>First check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-128-1" name="__codelineno-128-1" href="#__codelineno-128-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>We may see:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-129-1" name="__codelineno-129-1" href="#__codelineno-129-1"></a>modified: mkdocs.yml
+<a id="__codelineno-129-2" name="__codelineno-129-2" href="#__codelineno-129-2"></a>untracked: docs/frameworks/typescript.md
+</code></pre></div>
+<p>Preview:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-130-1" name="__codelineno-130-1" href="#__codelineno-130-1"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<p>After checking everything:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-131-1" name="__codelineno-131-1" href="#__codelineno-131-1"></a>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+</code></pre></div>
+<p>Then stage:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-132-1" name="__codelineno-132-1" href="#__codelineno-132-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>Check:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-133-1" name="__codelineno-133-1" href="#__codelineno-133-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<p>Commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-134-1" name="__codelineno-134-1" href="#__codelineno-134-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add TypeScript notes&quot;</span>
+</code></pre></div>
+<p>Push:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-135-1" name="__codelineno-135-1" href="#__codelineno-135-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>If deployment is done with MkDocs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-136-1" name="__codelineno-136-1" href="#__codelineno-136-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<p>Then open the published website.</p>
+<hr />
+<h1 id="39-common-mistakes">39. Common Mistakes</h1>
+<h2 id="mistake-1-forgetting-to-commit">Mistake 1 — Forgetting to commit</h2>
+<p>Running:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-137-1" name="__codelineno-137-1" href="#__codelineno-137-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>does not finish the process.</p>
+<p>You still need:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-138-1" name="__codelineno-138-1" href="#__codelineno-138-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;message&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="mistake-2-forgetting-to-push">Mistake 2 — Forgetting to push</h2>
+<p>A commit is normally local.</p>
+<p>If you want that commit on GitHub:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-139-1" name="__codelineno-139-1" href="#__codelineno-139-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>So:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-140-1" name="__codelineno-140-1" href="#__codelineno-140-1"></a>git commit
+</code></pre></div>
+<p>and:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-141-1" name="__codelineno-141-1" href="#__codelineno-141-1"></a>git push
+</code></pre></div>
+<p>are not the same thing.</p>
+<hr />
+<h2 id="mistake-3-thinking-git-add-uploads-files">Mistake 3 — Thinking git add uploads files</h2>
+<p>It does not.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-142-1" name="__codelineno-142-1" href="#__codelineno-142-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<p>means:</p>
+<blockquote>
+<p>Put these changes into the staging area.</p>
+</blockquote>
+<p>It does not mean:</p>
+<blockquote>
+<p>Upload them to GitHub.</p>
+</blockquote>
+<hr />
+<h2 id="mistake-4-thinking-git-and-github-are-the-same">Mistake 4 — Thinking Git and GitHub are the same</h2>
+<p>They are not.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-143-1" name="__codelineno-143-1" href="#__codelineno-143-1"></a>Git      → version control software
+<a id="__codelineno-143-2" name="__codelineno-143-2" href="#__codelineno-143-2"></a>GitHub   → online hosting/collaboration platform
+</code></pre></div>
+<hr />
+<h2 id="mistake-5-pushing-secrets">Mistake 5 — Pushing secrets</h2>
+<p>Never intentionally commit things like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-144-1" name="__codelineno-144-1" href="#__codelineno-144-1"></a>.env
+<a id="__codelineno-144-2" name="__codelineno-144-2" href="#__codelineno-144-2"></a>API keys
+<a id="__codelineno-144-3" name="__codelineno-144-3" href="#__codelineno-144-3"></a>private credentials
+<a id="__codelineno-144-4" name="__codelineno-144-4" href="#__codelineno-144-4"></a>passwords
+</code></pre></div>
+<p>Use <code>.gitignore</code> where appropriate, but remember:</p>
+<blockquote>
+<p><code>.gitignore</code> does not magically remove a secret that has already been committed.</p>
+</blockquote>
+<p>If a secret has been exposed, it should be treated as compromised and rotated/revoked.</p>
+<hr />
+<h2 id="mistake-6-using-git-reset-hard-without-understanding-it">Mistake 6 — Using git reset --hard without understanding it</h2>
+<p>This can discard work.</p>
+<p>Always understand what Git is going to remove before using destructive commands.</p>
+<hr />
+<h2 id="mistake-7-working-directly-on-main-for-everything">Mistake 7 — Working directly on main for everything</h2>
+<p>For personal projects, working on <code>main</code> can be completely reasonable.</p>
+<p>For larger projects, feature branches are commonly used:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-145-1" name="__codelineno-145-1" href="#__codelineno-145-1"></a>main
+<a id="__codelineno-145-2" name="__codelineno-145-2" href="#__codelineno-145-2"></a> ├── feature-login
+<a id="__codelineno-145-3" name="__codelineno-145-3" href="#__codelineno-145-3"></a> ├── feature-payment
+<a id="__codelineno-145-4" name="__codelineno-145-4" href="#__codelineno-145-4"></a> └── fix-navbar
+</code></pre></div>
+<hr />
+<h1 id="40-useful-commands-cheat-sheet">40. Useful Commands Cheat Sheet</h1>
+<h2 id="installation-information">Installation / information</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-146-1" name="__codelineno-146-1" href="#__codelineno-146-1"></a>git<span class="w"> </span>--version
+<a id="__codelineno-146-2" name="__codelineno-146-2" href="#__codelineno-146-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--list
+</code></pre></div>
+<hr />
+<h2 id="start-repository">Start repository</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-147-1" name="__codelineno-147-1" href="#__codelineno-147-1"></a>git<span class="w"> </span>init
+</code></pre></div>
+<hr />
+<h2 id="check-state">Check state</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-148-1" name="__codelineno-148-1" href="#__codelineno-148-1"></a>git<span class="w"> </span>status
+</code></pre></div>
+<hr />
+<h2 id="stage">Stage</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-149-1" name="__codelineno-149-1" href="#__codelineno-149-1"></a>git<span class="w"> </span>add<span class="w"> </span>filename
+<a id="__codelineno-149-2" name="__codelineno-149-2" href="#__codelineno-149-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<hr />
+<h2 id="commit">Commit</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-150-1" name="__codelineno-150-1" href="#__codelineno-150-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;message&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="history">History</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-151-1" name="__codelineno-151-1" href="#__codelineno-151-1"></a>git<span class="w"> </span>log
+<a id="__codelineno-151-2" name="__codelineno-151-2" href="#__codelineno-151-2"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<hr />
+<h2 id="changes">Changes</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-152-1" name="__codelineno-152-1" href="#__codelineno-152-1"></a>git<span class="w"> </span>diff
+</code></pre></div>
+<hr />
+<h2 id="branches">Branches</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-153-1" name="__codelineno-153-1" href="#__codelineno-153-1"></a>git<span class="w"> </span>branch
+<a id="__codelineno-153-2" name="__codelineno-153-2" href="#__codelineno-153-2"></a>git<span class="w"> </span>switch<span class="w"> </span>branch-name
+<a id="__codelineno-153-3" name="__codelineno-153-3" href="#__codelineno-153-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>new-branch
+</code></pre></div>
+<hr />
+<h2 id="merge">Merge</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-154-1" name="__codelineno-154-1" href="#__codelineno-154-1"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+<a id="__codelineno-154-2" name="__codelineno-154-2" href="#__codelineno-154-2"></a>git<span class="w"> </span>merge<span class="w"> </span>branch-name
+</code></pre></div>
+<hr />
+<h2 id="remote">Remote</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-155-1" name="__codelineno-155-1" href="#__codelineno-155-1"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+<a id="__codelineno-155-2" name="__codelineno-155-2" href="#__codelineno-155-2"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>URL
+</code></pre></div>
+<hr />
+<h2 id="download-repository">Download repository</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-156-1" name="__codelineno-156-1" href="#__codelineno-156-1"></a>git<span class="w"> </span>clone<span class="w"> </span>URL
+</code></pre></div>
+<hr />
+<h2 id="upload-commits">Upload commits</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-157-1" name="__codelineno-157-1" href="#__codelineno-157-1"></a>git<span class="w"> </span>push
+</code></pre></div>
+<hr />
+<h2 id="download-and-integrate-remote-changes">Download and integrate remote changes</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-158-1" name="__codelineno-158-1" href="#__codelineno-158-1"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<hr />
+<h2 id="download-remote-information">Download remote information</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-159-1" name="__codelineno-159-1" href="#__codelineno-159-1"></a>git<span class="w"> </span>fetch
+</code></pre></div>
+<hr />
+<h2 id="restore-changes">Restore changes</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-160-1" name="__codelineno-160-1" href="#__codelineno-160-1"></a>git<span class="w"> </span>restore<span class="w"> </span>filename
+<a id="__codelineno-160-2" name="__codelineno-160-2" href="#__codelineno-160-2"></a>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>filename
+</code></pre></div>
+<hr />
+<h2 id="temporarily-store-work">Temporarily store work</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-161-1" name="__codelineno-161-1" href="#__codelineno-161-1"></a>git<span class="w"> </span>stash
+<a id="__codelineno-161-2" name="__codelineno-161-2" href="#__codelineno-161-2"></a>git<span class="w"> </span>stash<span class="w"> </span>pop
+</code></pre></div>
+<hr />
+<h2 id="tags">Tags</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-162-1" name="__codelineno-162-1" href="#__codelineno-162-1"></a>git<span class="w"> </span>tag
+<a id="__codelineno-162-2" name="__codelineno-162-2" href="#__codelineno-162-2"></a>git<span class="w"> </span>tag<span class="w"> </span>v1.0.0
+</code></pre></div>
+<hr />
+<h1 id="41-a-simple-mental-model">41. A Simple Mental Model</h1>
+<p>If you forget everything else, remember this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-163-1" name="__codelineno-163-1" href="#__codelineno-163-1"></a>                 YOUR COMPUTER
+<a id="__codelineno-163-2" name="__codelineno-163-2" href="#__codelineno-163-2"></a>┌──────────────────────────────────────────┐
+<a id="__codelineno-163-3" name="__codelineno-163-3" href="#__codelineno-163-3"></a>│                                          │
+<a id="__codelineno-163-4" name="__codelineno-163-4" href="#__codelineno-163-4"></a>│  Working Directory                       │
+<a id="__codelineno-163-5" name="__codelineno-163-5" href="#__codelineno-163-5"></a>│       │                                  │
+<a id="__codelineno-163-6" name="__codelineno-163-6" href="#__codelineno-163-6"></a>│       │ git add                          │
+<a id="__codelineno-163-7" name="__codelineno-163-7" href="#__codelineno-163-7"></a>│       ↓                                  │
+<a id="__codelineno-163-8" name="__codelineno-163-8" href="#__codelineno-163-8"></a>│  Staging Area                            │
+<a id="__codelineno-163-9" name="__codelineno-163-9" href="#__codelineno-163-9"></a>│       │                                  │
+<a id="__codelineno-163-10" name="__codelineno-163-10" href="#__codelineno-163-10"></a>│       │ git commit                       │
+<a id="__codelineno-163-11" name="__codelineno-163-11" href="#__codelineno-163-11"></a>│       ↓                                  │
+<a id="__codelineno-163-12" name="__codelineno-163-12" href="#__codelineno-163-12"></a>│  Local Git Repository                    │
+<a id="__codelineno-163-13" name="__codelineno-163-13" href="#__codelineno-163-13"></a>│       │                                  │
+<a id="__codelineno-163-14" name="__codelineno-163-14" href="#__codelineno-163-14"></a>│       │ git push                         │
+<a id="__codelineno-163-15" name="__codelineno-163-15" href="#__codelineno-163-15"></a>└───────┼──────────────────────────────────┘
+<a id="__codelineno-163-16" name="__codelineno-163-16" href="#__codelineno-163-16"></a>        ↓
+<a id="__codelineno-163-17" name="__codelineno-163-17" href="#__codelineno-163-17"></a>     GITHUB
+<a id="__codelineno-163-18" name="__codelineno-163-18" href="#__codelineno-163-18"></a>   Remote Repository
+</code></pre></div>
+<p>And when someone else has new changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-164-1" name="__codelineno-164-1" href="#__codelineno-164-1"></a>GITHUB
+<a id="__codelineno-164-2" name="__codelineno-164-2" href="#__codelineno-164-2"></a>   │
+<a id="__codelineno-164-3" name="__codelineno-164-3" href="#__codelineno-164-3"></a>   │ git pull
+<a id="__codelineno-164-4" name="__codelineno-164-4" href="#__codelineno-164-4"></a>   ↓
+<a id="__codelineno-164-5" name="__codelineno-164-5" href="#__codelineno-164-5"></a>YOUR LOCAL REPOSITORY
+</code></pre></div>
+<p>The core cycle is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-165-1" name="__codelineno-165-1" href="#__codelineno-165-1"></a>CHANGE
+<a id="__codelineno-165-2" name="__codelineno-165-2" href="#__codelineno-165-2"></a>  ↓
+<a id="__codelineno-165-3" name="__codelineno-165-3" href="#__codelineno-165-3"></a>STATUS
+<a id="__codelineno-165-4" name="__codelineno-165-4" href="#__codelineno-165-4"></a>  ↓
+<a id="__codelineno-165-5" name="__codelineno-165-5" href="#__codelineno-165-5"></a>ADD
+<a id="__codelineno-165-6" name="__codelineno-165-6" href="#__codelineno-165-6"></a>  ↓
+<a id="__codelineno-165-7" name="__codelineno-165-7" href="#__codelineno-165-7"></a>COMMIT
+<a id="__codelineno-165-8" name="__codelineno-165-8" href="#__codelineno-165-8"></a>  ↓
+<a id="__codelineno-165-9" name="__codelineno-165-9" href="#__codelineno-165-9"></a>PUSH
+</code></pre></div>
+<p>And when you need other people's changes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-166-1" name="__codelineno-166-1" href="#__codelineno-166-1"></a>PULL
+</code></pre></div>
+<hr />
+<h1 id="final-notes">Final Notes</h1>
+<h3 id="the-five-commands-to-learn-first">The five commands to learn first</h3>
+<p>Do not try to memorize every Git command at once.</p>
+<p>Start with these:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-167-1" name="__codelineno-167-1" href="#__codelineno-167-1"></a>git<span class="w"> </span>status
+<a id="__codelineno-167-2" name="__codelineno-167-2" href="#__codelineno-167-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-167-3" name="__codelineno-167-3" href="#__codelineno-167-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;message&quot;</span>
+<a id="__codelineno-167-4" name="__codelineno-167-4" href="#__codelineno-167-4"></a>git<span class="w"> </span>push
+<a id="__codelineno-167-5" name="__codelineno-167-5" href="#__codelineno-167-5"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Understand what each one does.</p>
+<h3 id="the-most-important-difference">The most important difference</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-168-1" name="__codelineno-168-1" href="#__codelineno-168-1"></a>git add
+<a id="__codelineno-168-2" name="__codelineno-168-2" href="#__codelineno-168-2"></a>    ↓
+<a id="__codelineno-168-3" name="__codelineno-168-3" href="#__codelineno-168-3"></a>staging
+<a id="__codelineno-168-4" name="__codelineno-168-4" href="#__codelineno-168-4"></a>
+<a id="__codelineno-168-5" name="__codelineno-168-5" href="#__codelineno-168-5"></a>git commit
+<a id="__codelineno-168-6" name="__codelineno-168-6" href="#__codelineno-168-6"></a>    ↓
+<a id="__codelineno-168-7" name="__codelineno-168-7" href="#__codelineno-168-7"></a>save a version in local Git history
+<a id="__codelineno-168-8" name="__codelineno-168-8" href="#__codelineno-168-8"></a>
+<a id="__codelineno-168-9" name="__codelineno-168-9" href="#__codelineno-168-9"></a>git push
+<a id="__codelineno-168-10" name="__codelineno-168-10" href="#__codelineno-168-10"></a>    ↓
+<a id="__codelineno-168-11" name="__codelineno-168-11" href="#__codelineno-168-11"></a>send commits to remote/GitHub
+<a id="__codelineno-168-12" name="__codelineno-168-12" href="#__codelineno-168-12"></a>
+<a id="__codelineno-168-13" name="__codelineno-168-13" href="#__codelineno-168-13"></a>git pull
+<a id="__codelineno-168-14" name="__codelineno-168-14" href="#__codelineno-168-14"></a>    ↓
+<a id="__codelineno-168-15" name="__codelineno-168-15" href="#__codelineno-168-15"></a>bring remote changes into your local branch
+</code></pre></div>
+<h3 id="a-normal-daily-workflow">A normal daily workflow</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-169-1" name="__codelineno-169-1" href="#__codelineno-169-1"></a>git<span class="w"> </span>status
+<a id="__codelineno-169-2" name="__codelineno-169-2" href="#__codelineno-169-2"></a>
+<a id="__codelineno-169-3" name="__codelineno-169-3" href="#__codelineno-169-3"></a><span class="c1"># edit files</span>
+<a id="__codelineno-169-4" name="__codelineno-169-4" href="#__codelineno-169-4"></a>
+<a id="__codelineno-169-5" name="__codelineno-169-5" href="#__codelineno-169-5"></a>git<span class="w"> </span>status
+<a id="__codelineno-169-6" name="__codelineno-169-6" href="#__codelineno-169-6"></a>
+<a id="__codelineno-169-7" name="__codelineno-169-7" href="#__codelineno-169-7"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-169-8" name="__codelineno-169-8" href="#__codelineno-169-8"></a>
+<a id="__codelineno-169-9" name="__codelineno-169-9" href="#__codelineno-169-9"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Describe what you changed&quot;</span>
+<a id="__codelineno-169-10" name="__codelineno-169-10" href="#__codelineno-169-10"></a>
+<a id="__codelineno-169-11" name="__codelineno-169-11" href="#__codelineno-169-11"></a>git<span class="w"> </span>push
+</code></pre></div>
+<p>If other people are working on the same repository, it is often useful to update your local branch before starting work:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-170-1" name="__codelineno-170-1" href="#__codelineno-170-1"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Then work, commit, and push.</p>
+<h3 id="remember">Remember</h3>
+<p>Git is not something you need to fear.</p>
+<p>At the beginning, it may look like there are hundreds of commands. In normal development, however, you repeatedly use a relatively small set of commands.</p>
+<p>First become comfortable with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-171-1" name="__codelineno-171-1" href="#__codelineno-171-1"></a>status
+<a id="__codelineno-171-2" name="__codelineno-171-2" href="#__codelineno-171-2"></a>add
+<a id="__codelineno-171-3" name="__codelineno-171-3" href="#__codelineno-171-3"></a>commit
+<a id="__codelineno-171-4" name="__codelineno-171-4" href="#__codelineno-171-4"></a>push
+<a id="__codelineno-171-5" name="__codelineno-171-5" href="#__codelineno-171-5"></a>pull
+<a id="__codelineno-171-6" name="__codelineno-171-6" href="#__codelineno-171-6"></a>branch
+<a id="__codelineno-171-7" name="__codelineno-171-7" href="#__codelineno-171-7"></a>switch
+<a id="__codelineno-171-8" name="__codelineno-171-8" href="#__codelineno-171-8"></a>merge
+<a id="__codelineno-171-9" name="__codelineno-171-9" href="#__codelineno-171-9"></a>clone
+</code></pre></div>
+<p>Once these become familiar, the rest of Git becomes much easier to understand.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
